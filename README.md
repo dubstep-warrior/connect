@@ -1,6 +1,6 @@
 <div align="center">
 <h1 align="center">
-<img src="https://cdn-icons-png.flaticon.com/512/3775/3775201.png" width="100" />
+<img src="https://cdn-icons-png.flaticon.com/512/5500/5500939.png" width="100" />
 <br>Connect!
 </h1>
 <h3>◦ Connecting through barriers</h3>
