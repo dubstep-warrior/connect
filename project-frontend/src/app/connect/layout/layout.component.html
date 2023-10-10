@@ -1,0 +1,37 @@
+<section class="row">
+  <div class="col-4">
+    <ul>
+        <li [class.selected]="selectedTitle == 'find'" (click)="selectTitle('find')">Find new connections</li>
+        <li [class.selected]="selectedTitle == 'outgoing'" (click)="selectTitle('outgoing')">Outgoing requests</li>
+        <li [class.selected]="selectedTitle == 'incoming'" (click)="selectTitle('incoming')">Incoming requests</li>
+        <li [class.selected]="selectedTitle == 'current'" (click)="selectTitle('current')">Current connections</li> 
+    </ul>
+  </div>
+  <div class="col-8">
+     <div>
+        <h1>{{ titles[selectedTitle] }}</h1>
+        <input type="text" placeholder="Search" [(ngModel)]="search" (input)="displaySearchedUsers($event)">
+     </div>
+     <div *ngFor="let user of displayModel">
+        <div>
+            <div>
+                <app-profile-tag [user]="user"></app-profile-tag>
+                <div *ngIf="selectedTitle == 'find'">
+                    <button (click)="addUser(user)">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </div>
+                <div *ngIf="selectedTitle == 'incoming'">
+                    <button (click)="confirmRequest(user, 'add')">
+                        <mat-icon>check</mat-icon>
+                    </button>
+                    <button (click)="confirmRequest(user, 'remove')">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div>{{ user.description }}</div>
+        </div>
+     </div>
+  </div>
+</section>

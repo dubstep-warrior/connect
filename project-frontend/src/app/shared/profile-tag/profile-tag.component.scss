@@ -1,0 +1,50 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > :first-child {
+    display: flex;
+
+    > app-image {
+      cursor: pointer;
+    }
+
+    > .display {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-left: 8px;
+
+      > :first-child {
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      > :last-child {
+        display: flex;
+
+        > :nth-child(2) {
+          margin: 0 8px;
+        }
+      }
+    }
+  }
+
+  &.post-profile {
+    font-size: 12px;
+  }
+
+  button {
+    @include button;
+  }
+
+  .edit-section {
+    @include flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+}

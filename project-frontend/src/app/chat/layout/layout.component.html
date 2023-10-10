@@ -1,0 +1,65 @@
+<section class="row">
+  <div class="col-4">
+    <div *ngIf="user">
+      <!-- <app-profile-tag [user]="user"></app-profile-tag> -->
+      <app-image [src]="user.profile_img ?? '/media/standard/profile_img.jpg'" config="post-profile"></app-image>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>add</mat-icon>
+      </button>
+      <mat-menu xPosition="before" #menu="matMenu">
+        <button mat-menu-item (click)="newGroup()">New group</button>
+        <button mat-menu-item (click)="showContacts()">Contacts</button>
+      </mat-menu>
+    </div>
+    <div>
+      <div
+        [class.selected]="state.loadingChatId == chat.id || (currentChat?.id == chat.id)"
+        *ngFor="let chat of chats"
+        (click)="selectChat(chat)"
+      >
+        <div>
+          <app-image
+            [src]="chat.chatroom ? chat.image : chat.to_user.profile_img"
+            config="post-profile"
+          ></app-image>
+        </div>
+        <div>
+          <div>{{ chat.chatroom ? chat.name : '@' + chat.to_user.handle }}</div>
+          <div class="status" *ngIf="!chat.chatroom && chat.to_user.status ">{{ chat.to_user.status }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-8">
+    <div [hidden]="!currentChat">
+      <div *ngIf="currentChat">
+        <!-- <app-profile-tag
+          [user]="currentChat.to_user"
+          config="post-profile"
+          [status]="true"
+        ></app-profile-tag> -->
+        <img
+          [src]="'http://localhost:8000' + (currentChat.chatroom ? currentChat.image : currentChat.to_user.profile_img)"
+        />
+        <div>{{ currentChat.chatroom ? currentChat.name : '@' + currentChat.to_user.handle }}</div>
+      </div>
+      <app-chatlog [currentChat]="currentChat" [user]="user"></app-chatlog>
+      <div *ngIf="currentChat"> 
+        <form [formGroup]="currentChat.form">
+          <input
+            type="text"
+            placeholder="Write a message.."
+            formControlName="message"
+          /> 
+          <button (click)="sendMessage(currentChat.form)">
+            <mat-icon>send</mat-icon>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="no-selection" *ngIf="!currentChat">
+      <h3 *ngIf="!state.loading">Select a chat to start messaging</h3>
+      <mat-spinner *ngIf="state.loading"></mat-spinner>
+    </div>
+  </div>
+</section>

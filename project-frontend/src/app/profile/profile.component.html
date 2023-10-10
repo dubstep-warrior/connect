@@ -1,0 +1,34 @@
+<section class="row">
+  <div class="col-4" *ngIf="user">
+    <div>
+      <app-profile-tag [isCurrentUser]="isCurrentUser" [user]="user" [profile_details]="true" (editModeEvent)="setEditMode($event)"></app-profile-tag>
+    </div>
+    <div (click)="showConnections(user.connections)" class="connections" *ngIf="user.connections?.length">
+      <div><mat-icon>people</mat-icon></div>
+      <div>{{ user.connections?.length }} connections</div>
+    </div>
+    <div class="status" *ngIf="user.status && !editMode">
+      <div><mat-icon>face</mat-icon></div>
+      <div>{{ user.status }}</div>
+    </div>
+    <div class="description" *ngIf="user.description && !editMode">
+      <div><mat-icon>home</mat-icon></div>
+      <div>{{ user.description }}</div>
+    </div>
+    <div *ngIf="editMode" class="form">
+      <form [formGroup]="editProfileForm">
+        <input type="text" formControlName="status" placeholder="Add a status">
+        <textarea name="" id="" cols="30" rows="10" formControlName="description"></textarea>
+      </form>
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="add-post" *ngIf="isCurrentUser">
+      <div [routerLink]="['/profile']" *ngIf="user">
+        <app-image [src]="user.profile_img ?? '/media/standard/profile_img.jpg'" config="post-profile"></app-image>
+      </div>
+      <div (click)="addPost()">Add a Post</div>
+    </div>
+    <app-feed [feed]="feed" [isCurrentUser]="isCurrentUser" [user]="user"></app-feed>
+  </div>
+</section>

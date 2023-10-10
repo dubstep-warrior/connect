@@ -1,0 +1,17 @@
+<form [formGroup]="form">
+  <div class="image-upload">
+    <div>
+         
+      <label for="file-overlay-input">
+        <mat-icon>camera_enhance</mat-icon> 
+      </label>
+      <img *ngIf="preview_img" [src]="preview_img | safeResourceUrl">
+      <input id="file-overlay-input" type="file" (change)="uploadFile($event)" />
+    </div>
+  </div>
+
+  <input placeholder="Add group name" formControlName="name" />
+  <button (click)="submit()" [disabled]="this.form.get('name')?.pristine">
+    <mat-icon>send</mat-icon>
+  </button>
+</form>

@@ -1,0 +1,36 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+section {
+  > form {
+    margin-top: 8px;
+
+    > :first-child {
+      width: 100%;
+      min-height: 300px;
+      border: none;
+      overflow: auto;
+      outline: none;
+      box-shadow: none;
+      resize: none;
+    }
+ 
+  }
+
+  > div {
+    margin-bottom: 8px;
+  }
+
+  > button {
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1px solid rgb(146, 146, 146);
+    background-color: $standardSuperLightGrey;
+
+    &:hover {
+      background-color: $standardLightGrey;
+    }
+  }
+}

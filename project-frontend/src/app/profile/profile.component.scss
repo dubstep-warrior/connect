@@ -1,0 +1,77 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+section {
+  margin: 48px auto;
+
+  > .col-4 {
+    > * {
+      margin-bottom: 8px;
+    }
+
+    > :first-child {
+      margin-bottom: 16px;
+    }
+
+    mat-icon {
+      margin-right: 8px;
+      font-size: 18px;
+      height: auto;
+      margin-top: 2px;
+    }
+
+    .connections,
+    .status,
+    .description {
+      @include flex;
+      flex-wrap: nowrap;
+    }
+
+    .connections > :last-child {
+      color: rgb(48, 48, 246);
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline
+      }
+    }
+
+    form {
+      @include flex;
+      flex-direction: column;
+
+      input {
+        margin-bottom: 8px;
+      }
+
+      > * {
+        flex-grow: 1;
+        border-radius: 8px;
+        border: 1px solid $standardLightGrey;
+        outline: none;
+        box-shadow: none;
+        resize: none;
+      }
+    }
+  }
+
+  > .col-8 {
+    .add-post {
+      display: flex;
+      align-items: center;
+      margin-bottom: 32px;
+
+      > * {
+        cursor: pointer;
+      }
+
+      > :last-child {
+        margin-left: 8px;
+        border: 1px solid rgb(216, 216, 216);
+        flex-grow: 1;
+        padding: 8px;
+        border-radius: 8px;
+      }
+    }
+  }
+}

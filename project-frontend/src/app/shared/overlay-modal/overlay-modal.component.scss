@@ -1,0 +1,58 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+section {
+  background-color: white;
+  border-radius: 16px;
+  width: 700px;
+
+  @include screen-small {
+    position: absolute;
+    width: unset !important;
+    max-width: 100vh;
+    inset: auto 0 0 0;
+    border-radius: 16px 16px 0 0;
+  }
+
+  &.button {
+    width: 767px;
+  }
+
+  > :first-child {
+    @include flex;
+    align-items: center;
+    min-height: 64px;
+    border-bottom: 1px solid black;
+
+    > div {
+      @include flex; 
+      flex-grow: 1;
+      justify-content: center;
+      position: relative;
+
+      mat-icon {
+        position: absolute;
+        border-radius: 50%;
+        right: 0;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $standardGrey;
+          color: white;
+        }
+      }
+    }
+  }
+
+  > div {
+    padding: 0 24px;
+  }
+
+  > :last-child {
+    position: relative;
+
+    &.button {
+      padding-bottom: 64px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.chat-log {
+  background-color: $standardLightGrey;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 8px 0;
+
+  .handle {
+    font-weight: bold;
+    text-align: start
+  }
+
+  > div > div {
+    @include flex;
+    gap: 8px;
+    padding: 0 8px;
+    margin-bottom: 8px;
+    flex-wrap: nowrap;
+
+    &.self {
+      flex-direction: row-reverse;
+
+      > :last-child {
+        background-color: rgb(48, 48, 246);
+        color: white;
+      }
+    }
+
+    > :last-child {
+      @include flex;
+      flex-direction: column;
+      border-radius: 8px;
+      background-color: white;
+      padding: 8px;
+      font-size: 14px;
+      max-width: 500px;
+
+      .image,
+        > :last-child {
+          margin-top: 8px;
+        }
+
+        > :last-child {
+            text-align: end;
+        }
+    }
+  }
+}

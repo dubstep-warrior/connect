@@ -1,0 +1,18 @@
+<section [class.homepage]="!user" [class.feed]="user">
+  <div class="add-post" *ngIf="user">
+    <div [routerLink]="['/profile']" *ngIf="user">
+      <app-image
+        [src]="user.profile_img ?? '/media/standard/profile_img.jpg'"
+        config="post-profile"
+      ></app-image>
+    </div>
+    <div (click)="addPost()">Add a Post</div>
+  </div>
+  <app-feed *ngIf="user" [feed]="feed"></app-feed>
+  <div *ngIf="!user && !loading">
+    <h2>Welcome to Connect!</h2>
+    <div>
+      Learn new languages as you connect with users all around the world!
+    </div>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.img-upload {
+    align-items: center;
+    
+    .image-upload {
+        cursor: pointer;
+    
+        > div {
+          @include flex;
+          justify-content: flex-end;
+          position: relative;
+          border-radius: 50%;
+          overflow: hidden;
+    
+          > label {
+            @include flex;
+            padding: 8px;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 1px solid $standardLightGrey; 
+            cursor: pointer;
+            z-index: 2;
+    
+            &:hover {
+              background-color: $standardSuperLightGrey;
+              opacity: 0.6;
+            }
+    
+            > mat-icon {
+              font-size: 32px;
+              width: 32px;
+              height: 32px;
+              z-index: 2;
+            } 
+          }
+    
+          > img {
+            position: absolute;
+            inset: 0 0 0 0;
+            width: 120px;
+            height: 120px;
+            z-index: 1;
+          }
+    
+          > input {
+            display: none;
+          }
+        }
+      }
+}

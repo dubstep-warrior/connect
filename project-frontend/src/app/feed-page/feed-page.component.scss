@@ -1,0 +1,38 @@
+@use "mixins" as *;
+
+section { 
+
+  .add-post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+
+    > * {
+      cursor: pointer;
+    }
+
+    > :last-child {
+      margin-left: 8px;
+      border: 1px solid rgb(216, 216, 216);
+      flex-grow: 1;
+      padding: 8px;
+      border-radius: 8px;
+    }
+  }
+
+  
+  &.homepage {
+    @include flex;
+    height: 100%;
+    align-items: center;
+
+    > div {
+      margin-left: 64px;
+    }
+  }
+
+  &.feed {
+    margin: auto;
+    padding: 48px 144px;
+  }
+}

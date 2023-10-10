@@ -1,0 +1,15 @@
+<!-- <h1>FRONTEND</h1> -->
+<!-- <button *ngIf="user" type="button" (click)="logout()">Logout</button> -->
+<section>
+  <div>
+    <ul>
+        <li [class.selected]="selectedOption == ''" [routerLink]="'/'">{{ user ? 'Feed' : 'Home' }}</li>
+        <li [class.selected]="selectedOption == 'connect'" *ngIf="user" [routerLink]="'/connect'">Connect</li>
+        <li [class.selected]="selectedOption == 'chat'" *ngIf="user" [routerLink]="'/chat'">Chat</li>
+        <li [class.selected]="selectedOption == 'profile'" *ngIf="user" [routerLink]="'/profile'">Profile</li>
+        <li *ngIf="user" (click)="logout()" [routerLink]="'/'">Logout</li>
+        <li [class.selected]="selectedOption == 'login'" *ngIf="!user" [routerLink]="'/login'">Login</li>
+        <li [class.selected]="selectedOption == 'registration'" *ngIf="!user" [routerLink]="'/registration'">Register</li>
+      </ul>
+  </div>
+</section>

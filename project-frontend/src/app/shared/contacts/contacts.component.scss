@@ -1,0 +1,49 @@
+ @use 'variables' as *;
+ @use 'mixins' as *;
+
+section {
+    > .contacts > div {
+        padding: 8px 12px;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: $standardLightGrey;
+        }
+    }
+
+    > .add-user {
+        position: relative;
+
+        > div:not(:last-child) {
+            @include flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            padding: 8px 12px;  
+        }
+
+        > :nth-last-child(2) {
+            padding-bottom: 88px !important;
+        }
+
+        > :last-child {
+            @include flex; 
+            position: absolute;
+            inset: auto 0 0 0; 
+            padding: 16px 8px;
+
+            > button { 
+                border-radius: 12px;
+                flex-grow: 1;
+                padding: 16px 24px;
+                font-weight: bold;
+                border: 1px solid $standardLightGrey;
+                background-color: white;
+
+                &:hover {
+                    background-color: $standardLightGrey;
+                }
+            }
+        }
+    }
+}

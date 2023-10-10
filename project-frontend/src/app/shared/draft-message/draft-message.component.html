@@ -1,0 +1,18 @@
+<section>
+    <form [formGroup]="form">
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Type your message here"
+        formControlName="message"
+      ></textarea>
+   
+    </form>
+    <div *ngIf="preview_img">
+      <app-image [path]="preview_img" alt="" config="post"></app-image>
+    </div>
+    <button (click)="resolve()">Send</button>
+  </section>
+  

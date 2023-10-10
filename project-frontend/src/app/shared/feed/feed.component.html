@@ -1,0 +1,70 @@
+<section>
+  <div *ngFor="let post of feed">
+    <div>
+      <app-profile-tag
+        config="post-profile"
+        [user]="post.profile"
+        [post]="post"
+      ></app-profile-tag>
+    </div>
+    <div *ngIf="post.description">
+      <div>{{ post.description }}</div>
+    </div>
+    <div class="image" *ngIf="post.image">
+      <app-image [src]="post.image" config="post-display"></app-image>
+    </div>
+    <div
+      class="interactions"
+      *ngIf="post.likes?.length || post.comments?.length"
+    >
+      <div>
+        <mat-icon>thumb_up_alt</mat-icon>
+        <div>{{ post.likes?.length }}</div>
+      </div>
+      <div>
+        <mat-icon> comment</mat-icon>
+        <div>{{ post.comments?.length ?? 0 }}</div>
+      </div>
+    </div>
+    <div class="actions">
+      <ul>
+        <li
+          [class.liked]="post.likes.includes(current_user_id)"
+          (click)="likePost(post, post.likes.includes(current_user_id))"
+        >
+          Like
+        </li>
+        <li (click)="triggerCommentState(post)">Comment</li>
+      </ul>
+    </div>
+    <div class="comment-control" *ngIf="post.commentState">
+      <form [formGroup]="post.commentForm">
+        <input
+          type="text"
+          placeholder="What do you think?"
+          formControlName="description"
+        />
+        <button (click)="addComment(post)">
+          <mat-icon>send</mat-icon>
+        </button>
+      </form>
+    </div>
+    <div *ngIf="post.comments.length" class="comment-section">
+      <div *ngFor="let comment of post.comments">
+        <div>
+          <app-image
+            [src]="comment.profile.profile_img ?? '/media/standard/profile_img.jpg'"
+            config="comment"
+          ></app-image>
+        </div>
+        <div>
+          <div>
+            <div>@{{ comment.profile.handle }}</div>
+            <div>{{ comment.description }}</div>
+          </div>
+          <div>{{ comment.date_commented | dateAsAgo }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

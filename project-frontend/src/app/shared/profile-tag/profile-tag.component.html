@@ -1,0 +1,35 @@
+<div [class]="'profile ' + config">
+  <div>
+    <app-image
+      *ngIf="user"
+      [src]="user.profile_img ?? '/media/standard/profile_img.jpg'"
+      [config]="config == 'contact' ? 'profile' : config"
+      [style.pointer-events]="config !== 'contact' ? 'auto' : 'none'" 
+      [routerLink]="'/profile/' + user.id"
+    ></app-image>
+    <div class="display">
+      <div [style.pointer-events]="config !== 'contact' ? 'auto' : 'none'"  [routerLink]="'/profile/' + user.id">@{{ user.handle }}</div>
+      <div *ngIf="(config !== 'contact' || !user.status) && !status">
+        <div>{{ user.native | uppercase }}</div>
+        <div>-</div>
+        <div>{{ user.learning | uppercase }}</div>
+      </div>
+      <div *ngIf="(config == 'contact' && user.status) || status">
+        {{ user.status | uppercase }}
+      </div>
+    </div>
+     
+  </div>
+  <div *ngIf="post">
+    <div>{{ post.date_created | dateAsAgo }}</div>
+  </div>
+  <div class="edit-section" *ngIf="profile_details && isCurrentUser">
+    <button *ngIf="editMode" (click)="editProfileDetails(true)">
+      <mat-icon>check</mat-icon>
+    </button>
+    <button (click)="editProfileDetails(false)">
+      <mat-icon *ngIf="!editMode">edit</mat-icon>
+      <mat-icon *ngIf="editMode">close</mat-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<section>
+  <form [formGroup]="form">
+    <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      placeholder="Share about your day"
+      formControlName="description"
+    ></textarea>
+
+    <div class="image-upload">
+      <div>
+        <label for="file-input">
+          <mat-icon>insert_photo</mat-icon>
+        </label>
+        <input id="file-input" type="file" (change)="uploadFile($event)"/>
+      </div>
+    </div>
+  </form>
+  <div *ngIf="preview_img">
+    <app-image [path]="preview_img" alt="" config="post"></app-image>
+  </div>
+  <button (click)="resolve()">Post</button>
+</section>

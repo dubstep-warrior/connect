@@ -1,0 +1,26 @@
+<div class='chat-log' #chatLog>
+    <div *ngIf="currentChat">
+        <div [class.self]="message.user == user.id" *ngFor="let message of currentChat.messages">
+            <div>
+              <app-image
+                [src]="message.user_profile.profile_img ?? '/media/standard/profile_img.jpg'"
+                config="post-profile"
+              ></app-image>
+            </div>
+            <div>
+              <div class="handle" *ngIf="currentChat.chatroom">
+                @{{ message.user_profile.handle }}
+              </div>
+              <div>
+                {{ message.message }}
+              </div>
+              <div class="image" *ngIf="message.image">
+                  <app-image [src]="message.image" config="post-display"></app-image>
+              </div>
+              <div>
+                  {{ message.date_created | date: 'shortTime' }}
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>

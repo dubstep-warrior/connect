@@ -1,0 +1,11 @@
+<section>
+  <div>
+    <h1>Registration</h1>
+    <router-outlet></router-outlet>
+    <div *ngIf="errors">
+        <div class="err-msg" *ngFor="let err of errors | keyvalue">
+            {{ parsedKey(err.key) | titlecase }} : {{ err.value }}
+        </div>
+    </div>
+  </div>
+</section>

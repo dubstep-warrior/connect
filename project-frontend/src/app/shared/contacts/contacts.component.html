@@ -1,0 +1,16 @@
+<section>
+    <div *ngIf="!addUserstoGroup" class="contacts">
+        <div *ngFor="let contact of contacts" (click)="selectContact(contact)">
+            <app-profile-tag [user]="contact" config="contact" (click)="$event.preventDefault()"></app-profile-tag>
+        </div>
+    </div>
+    <div *ngIf="addUserstoGroup" class="add-user">
+        <div *ngFor="let contact of contacts">
+            <app-profile-tag [user]="contact" config="contact"></app-profile-tag>
+            <input type="checkbox" [(ngModel)]="contact.isSelected" [value]="contact.id">
+        </div>
+        <div>
+            <button (click)="submit()">Add Group</button>
+        </div>
+    </div>
+</section>

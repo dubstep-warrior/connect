@@ -1,0 +1,11 @@
+<section [class.button]="!!optionsData?.button">
+  <div>
+    <div>
+      <div>{{ optionsData?.title }}</div>
+      <mat-icon (click)="close()">close</mat-icon>
+    </div>
+  </div>
+  <div [class.button]="!!optionsData?.button">
+    <ng-container *ngComponentOutlet="content"></ng-container>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section>
+  <div>
+    <h1>Login</h1>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="email">Email</label>
+        <input type="text" formControlName="username" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" />
+      </div>
+      <button type="submit" [disabled]="form.invalid">Login</button>
+    </form>
+    <div *ngIf="err">
+      <div class="err-msg" *ngFor="let error of err | keyvalue">
+          {{ error.value }}
+      </div>
+    </div>
+  </div>
+   
+</section>

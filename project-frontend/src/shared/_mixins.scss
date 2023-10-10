@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+@mixin flex($direction: row) {
+  -webkit-box-flex: 0;
+  display: flex;
+  flex-direction: $direction;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+} 
+
+@mixin button() {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    border: 1px solid $standardLightGrey;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+  
+    &:hover {
+        background-color: $standardLightGrey;
+    }
+  
+    mat-icon {
+        font-size: 22px;
+    }
+} 
+
+@mixin screen-small {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+} 

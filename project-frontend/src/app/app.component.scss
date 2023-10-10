@@ -1,0 +1,14 @@
+@use "mixins" as *;
+
+div {
+    &.homepage { 
+        max-width: none !important; 
+        height: calc(100vh - 56px);
+        width: 100vw; 
+        background-size: cover !important;
+    
+        > div {
+            margin: auto;
+        }
+    }
+}

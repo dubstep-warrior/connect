@@ -1,0 +1,56 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+section {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    max-width: none;
+
+    > :first-child {
+        @include flex;
+        flex-direction: column;
+        border-radius: 12px;
+        border: 1px solid $standardLightGrey;
+        padding: 24px 24px;
+        align-items: center;
+
+        h1 {
+            margin-bottom: 24px;
+        }
+
+        form {
+            @include flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 24px;
+
+            > div {
+                @include flex;
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 18px;
+                gap: 12px;
+
+                input {
+                    border-radius: 6px;
+                    padding: 4px 8px;
+                    border: 1px solid $standardLightGrey;
+
+                }
+            }
+
+            button {
+                width: 100%;
+                border: 1px solid $standardLightGrey;
+
+                &:hover {
+                    background-color: $standardDarkGrey;
+                    color: white;
+                }
+            }
+        }
+    }
+}

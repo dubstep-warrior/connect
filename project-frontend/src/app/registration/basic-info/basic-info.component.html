@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+    <div>
+        <label for="username">Email: </label>
+        <input type="text" formControlName="email">
+    </div>
+    <div>
+        <label for="password">Password: </label>
+        <input type="password" formControlName="password">
+    </div>
+    <button routerLink='./user-information' [disabled]="form.invalid">Next</button>
+</form>
+
+ 

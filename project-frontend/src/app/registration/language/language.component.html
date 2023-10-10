@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+  <div>
+    <label for="password">Native language: </label>
+    <select formControlName="native" (change)="selectedNative()">
+      <option value="en">English</option>
+      <option value="jp">Japanese</option>
+      <option value="kr">Korean</option>
+    </select>
+  </div>
+  <div *ngIf="learningLanguageOptions">
+    <label for="username">What language would you like to learn? </label>
+    <select formControlName="learning"> 
+      <option *ngFor="let language of learningLanguageOptions" [value]="language">{{ learningLanguages[language] }}</option>
+    </select>
+  </div>
+  <div class="buttons">
+    <button routerLink="../user-information">Back</button>
+    <button (click)="submitRegistration()">Submit</button>
+  </div>
+</form>

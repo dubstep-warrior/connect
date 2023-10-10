@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+section {
+  max-width: 100%;
+  margin: auto;
+  background-color: $standardGrey;
+
+  > div {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      display: flex;
+
+      li {
+        padding: 16px 24px;
+
+        &:hover {
+          background-color: $standardLightGrey;
+          cursor: pointer;
+        }
+
+        &.selected {
+          border-bottom: 2px solid black;
+        }
+      }
+    }
+  }
+}

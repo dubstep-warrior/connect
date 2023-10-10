@@ -1,0 +1,69 @@
+@use "mixins" as *;
+@use 'variables' as *;
+
+
+ section {
+    @include flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: none;
+    align-items: center;
+    justify-content: center;
+
+    > div {
+        @include flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px; 
+
+        h1 {
+            margin-bottom: 24px;
+        }
+
+        ::ng-deep form {
+            @include flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 12px;
+            min-width: 366px;
+
+            > div:not(.buttons) {
+                @include flex;
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 18px;
+                gap: 12px;
+
+                input {
+                    border-radius: 6px;
+                    padding: 4px 8px;
+                    border: 1px solid $standardLightGrey;
+
+                }
+            }
+
+            > div:last-child.buttons {
+                @include flex;
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+                gap: 12px;
+
+                > button {
+                    width: 48% !important;
+                }
+            }
+
+            button {
+                width: 100%;
+                border: 1px solid $standardLightGrey;
+
+                &:hover {
+                    background-color: $standardDarkGrey;
+                    color: white;
+                }
+            }
+        }
+    }
+ }
