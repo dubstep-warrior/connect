@@ -1,6 +1,6 @@
 <div align="center">
 <h1 align="center">
-<img src="https://static.vecteezy.com/system/resources/previews/001/991/682/original/hub-network-connection-line-icon-on-white-background-free-vector.jpg" width="100" />
+<img src="https://cdn-icons-png.flaticon.com/512/3775/3775201.png" width="100" />
 <br>Connect!
 </h1>
 <h3>◦ Connecting through barriers</h3>
