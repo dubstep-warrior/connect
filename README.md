@@ -1,7 +1,7 @@
 <div align="center">
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="100" />
-<br>connect
+<img src="https://static.vecteezy.com/system/resources/previews/001/991/682/original/hub-network-connection-line-icon-on-white-background-free-vector.jpg" width="100" />
+<br>Connect!
 </h1>
 <h3>◦ Connecting through barriers</h3>
 <h3>◦ Developed with the software and tools listed below.</h3>
@@ -71,61 +71,8 @@ Private messaging and group chats
 │   └── socialnetworkbackend
 │       ├── account
 │       │   ├── __init__.py
-│       │   ├── __pycache__
-│       │   │   ├── __init__.cpython-311.pyc
-│       │   │   ├── __init__.cpython-38.pyc
-│       │   │   ├── admin.cpython-311.pyc
-│       │   │   ├── admin.cpython-38.pyc
-│       │   │   ├── apps.cpython-311.pyc
-│       │   │   ├── apps.cpython-38.pyc
-│       │   │   ├── model_factories.cpython-38.pyc
-│       │   │   ├── models.cpython-311.pyc
-│       │   │   ├── models.cpython-38.pyc
-│       │   │   ├── serializers.cpython-311.pyc
-│       │   │   ├── serializers.cpython-38.pyc
-│       │   │   ├── tests.cpython-38.pyc
-│       │   │   ├── urls.cpython-311.pyc
-│       │   │   ├── urls.cpython-38.pyc
-│       │   │   ├── views.cpython-311.pyc
-│       │   │   └── views.cpython-38.pyc
 │       │   ├── admin.py
 │       │   ├── apps.py
-│       │   ├── migrations
-│       │   │   ├── 0001_initial.py
-│       │   │   ├── 0002_remove_appuser_handle_appuser_learning_and_more.py
-│       │   │   ├── 0003_alter_appuser_description_alter_appuser_profile_img.py
-│       │   │   ├── 0004_appuser_status_alter_appuser_description_and_more.py
-│       │   │   ├── 0005_appuser_connections.py
-│       │   │   ├── 0006_alter_appuser_connections.py
-│       │   │   ├── 0007_alter_appuser_groups_alter_appuser_user_permissions.py
-│       │   │   ├── 0008_alter_appuser_learning_alter_appuser_native.py
-│       │   │   ├── __init__.py
-│       │   │   └── __pycache__
-│       │   │       ├── 0001_initial.cpython-311.pyc
-│       │   │       ├── 0001_initial.cpython-38.pyc
-│       │   │       ├── 0002_alter_appuser_profile_img.cpython-311.pyc
-│       │   │       ├── 0002_remove_appuser_handle.cpython-311.pyc
-│       │   │       ├── 0002_remove_appuser_handle_appuser_learning_and_more.cpython-311.pyc
-│       │   │       ├── 0002_remove_appuser_handle_appuser_learning_and_more.cpython-38.pyc
-│       │   │       ├── 0003_alter_appuser_description_alter_appuser_profile_img.cpython-311.pyc
-│       │   │       ├── 0003_alter_appuser_description_alter_appuser_profile_img.cpython-38.pyc
-│       │   │       ├── 0003_alter_appuser_profile_img.cpython-311.pyc
-│       │   │       ├── 0003_languages.cpython-311.pyc
-│       │   │       ├── 0004_appuser_status_alter_appuser_description_and_more.cpython-311.pyc
-│       │   │       ├── 0004_appuser_status_alter_appuser_description_and_more.cpython-38.pyc
-│       │   │       ├── 0004_remove_appuser_handle.cpython-311.pyc
-│       │   │       ├── 0005_alter_appuser_profile_img.cpython-311.pyc
-│       │   │       ├── 0005_appuser_connections.cpython-311.pyc
-│       │   │       ├── 0005_appuser_connections.cpython-38.pyc
-│       │   │       ├── 0006_alter_appuser_connections.cpython-311.pyc
-│       │   │       ├── 0006_alter_appuser_connections.cpython-38.pyc
-│       │   │       ├── 0006_remove_appuser_id_alter_appuser_user.cpython-311.pyc
-│       │   │       ├── 0007_alter_appuser_groups_alter_appuser_user_permissions.cpython-311.pyc
-│       │   │       ├── 0007_alter_appuser_groups_alter_appuser_user_permissions.cpython-38.pyc
-│       │   │       ├── 0008_alter_appuser_learning_alter_appuser_native.cpython-311.pyc
-│       │   │       ├── 0008_alter_appuser_learning_alter_appuser_native.cpython-38.pyc
-│       │   │       ├── __init__.cpython-311.pyc
-│       │   │       └── __init__.cpython-38.pyc
 │       │   ├── model_factories.py
 │       │   ├── models.py
 │       │   ├── serializers.py
@@ -133,65 +80,13 @@ Private messaging and group chats
 │       │   ├── urls.py
 │       │   └── views.py
 │       ├── base_classes
-│       │   ├── __pycache__
-│       │   │   ├── base_serializer_class.cpython-311.pyc
-│       │   │   └── base_serializer_class.cpython-38.pyc
 │       │   └── base_serializer_class.py
 │       ├── chat
 │       │   ├── __init__.py
-│       │   ├── __pycache__
-│       │   │   ├── __init__.cpython-311.pyc
-│       │   │   ├── __init__.cpython-38.pyc
-│       │   │   ├── admin.cpython-311.pyc
-│       │   │   ├── admin.cpython-38.pyc
-│       │   │   ├── apps.cpython-311.pyc
-│       │   │   ├── apps.cpython-38.pyc
-│       │   │   ├── consumers.cpython-311.pyc
-│       │   │   ├── consumers.cpython-38.pyc
-│       │   │   ├── middlewares.cpython-311.pyc
-│       │   │   ├── middlewares.cpython-38.pyc
-│       │   │   ├── model_factories.cpython-38.pyc
-│       │   │   ├── models.cpython-311.pyc
-│       │   │   ├── models.cpython-38.pyc
-│       │   │   ├── routing.cpython-311.pyc
-│       │   │   ├── routing.cpython-38.pyc
-│       │   │   ├── serializers.cpython-311.pyc
-│       │   │   ├── serializers.cpython-38.pyc
-│       │   │   ├── tests.cpython-38.pyc
-│       │   │   ├── urls.cpython-311.pyc
-│       │   │   ├── urls.cpython-38.pyc
-│       │   │   ├── views.cpython-311.pyc
-│       │   │   └── views.cpython-38.pyc
 │       │   ├── admin.py
 │       │   ├── apps.py
 │       │   ├── consumers.py
 │       │   ├── middlewares.py
-│       │   ├── migrations
-│       │   │   ├── 0001_initial.py
-│       │   │   ├── 0002_rename_chat_id_messages_chat.py
-│       │   │   ├── 0003_chat_name.py
-│       │   │   ├── 0004_chat_image_alter_messages_image.py
-│       │   │   ├── 0005_messageimage_alter_messages_image.py
-│       │   │   ├── 0006_remove_messages_image_delete_messageimage.py
-│       │   │   ├── 0007_rename_messages_message.py
-│       │   │   ├── __init__.py
-│       │   │   └── __pycache__
-│       │   │       ├── 0001_initial.cpython-311.pyc
-│       │   │       ├── 0001_initial.cpython-38.pyc
-│       │   │       ├── 0002_rename_chat_id_messages_chat.cpython-311.pyc
-│       │   │       ├── 0002_rename_chat_id_messages_chat.cpython-38.pyc
-│       │   │       ├── 0003_chat_name.cpython-311.pyc
-│       │   │       ├── 0003_chat_name.cpython-38.pyc
-│       │   │       ├── 0004_chat_image_alter_messages_image.cpython-311.pyc
-│       │   │       ├── 0004_chat_image_alter_messages_image.cpython-38.pyc
-│       │   │       ├── 0005_messageimage_alter_messages_image.cpython-311.pyc
-│       │   │       ├── 0005_messageimage_alter_messages_image.cpython-38.pyc
-│       │   │       ├── 0006_remove_messages_image_delete_messageimage.cpython-311.pyc
-│       │   │       ├── 0006_remove_messages_image_delete_messageimage.cpython-38.pyc
-│       │   │       ├── 0007_rename_messages_message.cpython-311.pyc
-│       │   │       ├── 0007_rename_messages_message.cpython-38.pyc
-│       │   │       ├── __init__.cpython-311.pyc
-│       │   │       └── __init__.cpython-38.pyc
 │       │   ├── model_factories.py
 │       │   ├── models.py
 │       │   ├── routing.py
@@ -201,39 +96,8 @@ Private messaging and group chats
 │       │   └── views.py
 │       ├── connect
 │       │   ├── __init__.py
-│       │   ├── __pycache__
-│       │   │   ├── __init__.cpython-311.pyc
-│       │   │   ├── __init__.cpython-38.pyc
-│       │   │   ├── admin.cpython-311.pyc
-│       │   │   ├── admin.cpython-38.pyc
-│       │   │   ├── apps.cpython-311.pyc
-│       │   │   ├── apps.cpython-38.pyc
-│       │   │   ├── model_factories.cpython-38.pyc
-│       │   │   ├── models.cpython-311.pyc
-│       │   │   ├── models.cpython-38.pyc
-│       │   │   ├── serializers.cpython-311.pyc
-│       │   │   ├── serializers.cpython-38.pyc
-│       │   │   ├── tests.cpython-38.pyc
-│       │   │   ├── urls.cpython-311.pyc
-│       │   │   ├── urls.cpython-38.pyc
-│       │   │   ├── views.cpython-311.pyc
-│       │   │   └── views.cpython-38.pyc
 │       │   ├── admin.py
 │       │   ├── apps.py
-│       │   ├── migrations
-│       │   │   ├── 0001_initial.py
-│       │   │   ├── 0002_rename_connection_request_connectionrequest.py
-│       │   │   ├── 0003_alter_connectionrequest_unique_together.py
-│       │   │   ├── __init__.py
-│       │   │   └── __pycache__
-│       │   │       ├── 0001_initial.cpython-311.pyc
-│       │   │       ├── 0001_initial.cpython-38.pyc
-│       │   │       ├── 0002_rename_connection_request_connectionrequest.cpython-311.pyc
-│       │   │       ├── 0002_rename_connection_request_connectionrequest.cpython-38.pyc
-│       │   │       ├── 0003_alter_connectionrequest_unique_together.cpython-311.pyc
-│       │   │       ├── 0003_alter_connectionrequest_unique_together.cpython-38.pyc
-│       │   │       ├── __init__.cpython-311.pyc
-│       │   │       └── __init__.cpython-38.pyc
 │       │   ├── model_factories.py
 │       │   ├── models.py
 │       │   ├── serializers.py
@@ -244,239 +108,15 @@ Private messaging and group chats
 │       ├── manage.py
 │       ├── media
 │       │   ├── chatroom_images
-│       │   │   ├── 1644424797237.jpg
-│       │   │   ├── 1644424797237_GQqJ9bp.jpg
-│       │   │   ├── 1644424797237_aCLg8xj.jpg
-│       │   │   ├── 1644424797237_ye2JzkL.jpg
-│       │   │   ├── bp_dj_platform_hero_b.jpg
-│       │   │   ├── bp_dj_platform_hero_b_Dec2jPD.jpg
-│       │   │   ├── bp_dj_platform_hero_b_XtCEvQi.jpg
-│       │   │   ├── bp_dj_platform_hero_b_dLGTeNF.jpg
-│       │   │   └── images.jpg
 │       │   ├── post_images
-│       │   │   ├── 1644424797237.jpg
-│       │   │   ├── 1644424797237_4PRtKtc.jpg
-│       │   │   ├── 1644424797237_OhddbJf.jpg
-│       │   │   ├── 1644424797237_Pn50hAi.jpg
-│       │   │   ├── 700-X-394-18-1.png
-│       │   │   ├── Picture1.png
-│       │   │   ├── Picture1_EAen3Iu.png
-│       │   │   ├── Screenshot_20221115_062001.png
-│       │   │   ├── Screenshot_20221123_120519.png
-│       │   │   ├── Software-Engineer.png
-│       │   │   ├── Software-Engineer_DA0nEDb.png
-│       │   │   ├── Software-Engineer_F96QbjZ.png
-│       │   │   ├── Software-Engineer_exSO59B.png
-│       │   │   ├── Software-Engineer_yaXCvlu.png
-│       │   │   ├── bp_dj_platform_hero_b.jpg
-│       │   │   ├── bp_dj_platform_hero_b_5HpgMu9.jpg
-│       │   │   ├── bp_dj_platform_hero_b_QlIWwNw.jpg
-│       │   │   ├── bp_dj_platform_hero_b_ZNN5b7v.jpg
-│       │   │   ├── bp_dj_platform_hero_b_dRprRQY.jpg
-│       │   │   ├── bp_dj_platform_hero_b_erMX6E9.jpg
-│       │   │   ├── bp_dj_platform_hero_b_o0Fzg5Y.jpg
-│       │   │   ├── kimetsu-no-yaiba-demon-slayer.gif
-│       │   │   ├── photo6226417877628594416.jpg
-│       │   │   ├── test__can_delete__mymodel
-│       │   │   ├── test__can_delete__mymodel_0q9PBoD
-│       │   │   ├── test__can_delete__mymodel_1SAVgoZ
-│       │   │   ├── test__can_delete__mymodel_1YMas2K
-│       │   │   ├── test__can_delete__mymodel_1nLOnRl
-│       │   │   ├── test__can_delete__mymodel_1uLPszQ
-│       │   │   ├── test__can_delete__mymodel_2j86glq
-│       │   │   ├── test__can_delete__mymodel_3xMb2dw
-│       │   │   ├── test__can_delete__mymodel_4qLMCPS
-│       │   │   ├── test__can_delete__mymodel_53EiHjp
-│       │   │   ├── test__can_delete__mymodel_5fHx2E7
-│       │   │   ├── test__can_delete__mymodel_6AOIP7q
-│       │   │   ├── test__can_delete__mymodel_6WZboaL
-│       │   │   ├── test__can_delete__mymodel_6grEmyc
-│       │   │   ├── test__can_delete__mymodel_94biEP6
-│       │   │   ├── test__can_delete__mymodel_9T72Rrm
-│       │   │   ├── test__can_delete__mymodel_9nBxwLt
-│       │   │   ├── test__can_delete__mymodel_9odVlUh
-│       │   │   ├── test__can_delete__mymodel_A3rKi59
-│       │   │   ├── test__can_delete__mymodel_AVQbVoo
-│       │   │   ├── test__can_delete__mymodel_AaQRv3R
-│       │   │   ├── test__can_delete__mymodel_AbCspkw
-│       │   │   ├── test__can_delete__mymodel_Asln7Ea
-│       │   │   ├── test__can_delete__mymodel_BUecvHV
-│       │   │   ├── test__can_delete__mymodel_BbVLpzo
-│       │   │   ├── test__can_delete__mymodel_C489DtU
-│       │   │   ├── test__can_delete__mymodel_CbkBBWn
-│       │   │   ├── test__can_delete__mymodel_DmWGveo
-│       │   │   ├── test__can_delete__mymodel_DvQCF2h
-│       │   │   ├── test__can_delete__mymodel_EEmyyBn
-│       │   │   ├── test__can_delete__mymodel_HHUq00O
-│       │   │   ├── test__can_delete__mymodel_HU7nrlu
-│       │   │   ├── test__can_delete__mymodel_IAfXwIQ
-│       │   │   ├── test__can_delete__mymodel_IgjN30f
-│       │   │   ├── test__can_delete__mymodel_Iw8FeM4
-│       │   │   ├── test__can_delete__mymodel_JTFRMES
-│       │   │   ├── test__can_delete__mymodel_JjoXIAl
-│       │   │   ├── test__can_delete__mymodel_KvXPJgY
-│       │   │   ├── test__can_delete__mymodel_LQN0Lf4
-│       │   │   ├── test__can_delete__mymodel_Ljlfd8u
-│       │   │   ├── test__can_delete__mymodel_Loffvvl
-│       │   │   ├── test__can_delete__mymodel_M2YAOWZ
-│       │   │   ├── test__can_delete__mymodel_NyQYSpe
-│       │   │   ├── test__can_delete__mymodel_O00ldiV
-│       │   │   ├── test__can_delete__mymodel_OjpRGFg
-│       │   │   ├── test__can_delete__mymodel_OswROgj
-│       │   │   ├── test__can_delete__mymodel_P7WdDlX
-│       │   │   ├── test__can_delete__mymodel_PBoCPuD
-│       │   │   ├── test__can_delete__mymodel_PErKThe
-│       │   │   ├── test__can_delete__mymodel_PwCzd2e
-│       │   │   ├── test__can_delete__mymodel_PxYBMIv
-│       │   │   ├── test__can_delete__mymodel_Qv9LEku
-│       │   │   ├── test__can_delete__mymodel_QyvhPEv
-│       │   │   ├── test__can_delete__mymodel_REWKlap
-│       │   │   ├── test__can_delete__mymodel_RMaarF8
-│       │   │   ├── test__can_delete__mymodel_SBuYUPs
-│       │   │   ├── test__can_delete__mymodel_SvTLL1n
-│       │   │   ├── test__can_delete__mymodel_T7XzQ0m
-│       │   │   ├── test__can_delete__mymodel_TQTGnpc
-│       │   │   ├── test__can_delete__mymodel_Vajdwwu
-│       │   │   ├── test__can_delete__mymodel_VtYcADe
-│       │   │   ├── test__can_delete__mymodel_VtaqJDu
-│       │   │   ├── test__can_delete__mymodel_WaGVtgp
-│       │   │   ├── test__can_delete__mymodel_WjSpNcU
-│       │   │   ├── test__can_delete__mymodel_XHDgR0d
-│       │   │   ├── test__can_delete__mymodel_XRQOQV5
-│       │   │   ├── test__can_delete__mymodel_YCDHRp8
-│       │   │   ├── test__can_delete__mymodel_YK0GZUI
-│       │   │   ├── test__can_delete__mymodel_YNwfCdz
-│       │   │   ├── test__can_delete__mymodel_YuzA5rg
-│       │   │   ├── test__can_delete__mymodel_aMpwDPj
-│       │   │   ├── test__can_delete__mymodel_apUBhE1
-│       │   │   ├── test__can_delete__mymodel_bFv5vkW
-│       │   │   ├── test__can_delete__mymodel_byGgSvJ
-│       │   │   ├── test__can_delete__mymodel_cOX1Vcb
-│       │   │   ├── test__can_delete__mymodel_d9SQrUt
-│       │   │   ├── test__can_delete__mymodel_dUuQzUd
-│       │   │   ├── test__can_delete__mymodel_e6Laes5
-│       │   │   ├── test__can_delete__mymodel_epBgIk8
-│       │   │   ├── test__can_delete__mymodel_fLgz1gX
-│       │   │   ├── test__can_delete__mymodel_g4o8zdI
-│       │   │   ├── test__can_delete__mymodel_gjt0exh
-│       │   │   ├── test__can_delete__mymodel_htIlsIi
-│       │   │   ├── test__can_delete__mymodel_hwYawA8
-│       │   │   ├── test__can_delete__mymodel_hzDWMic
-│       │   │   ├── test__can_delete__mymodel_iWcWkky
-│       │   │   ├── test__can_delete__mymodel_iZen6Ol
-│       │   │   ├── test__can_delete__mymodel_jjmv6gd
-│       │   │   ├── test__can_delete__mymodel_laRCoag
-│       │   │   ├── test__can_delete__mymodel_mj3LhMf
-│       │   │   ├── test__can_delete__mymodel_mkq9Vfv
-│       │   │   ├── test__can_delete__mymodel_n3IzCQa
-│       │   │   ├── test__can_delete__mymodel_pKkPvgf
-│       │   │   ├── test__can_delete__mymodel_pRYG58R
-│       │   │   ├── test__can_delete__mymodel_q87IKMm
-│       │   │   ├── test__can_delete__mymodel_rJtcXkU
-│       │   │   ├── test__can_delete__mymodel_rYWrlrw
-│       │   │   ├── test__can_delete__mymodel_s6Rlm3j
-│       │   │   ├── test__can_delete__mymodel_sRL2Czv
-│       │   │   ├── test__can_delete__mymodel_sSQuf0A
-│       │   │   ├── test__can_delete__mymodel_tQVq33l
-│       │   │   ├── test__can_delete__mymodel_tw80AxO
-│       │   │   ├── test__can_delete__mymodel_uJ5QQvG
-│       │   │   ├── test__can_delete__mymodel_udhvC3L
-│       │   │   ├── test__can_delete__mymodel_ukGqK0Z
-│       │   │   ├── test__can_delete__mymodel_vBWCh5E
-│       │   │   ├── test__can_delete__mymodel_vYrOIfz
-│       │   │   ├── test__can_delete__mymodel_w5fs6J5
-│       │   │   ├── test__can_delete__mymodel_wpYw1ZT
-│       │   │   ├── test__can_delete__mymodel_y8X42Xu
-│       │   │   ├── test__can_delete__mymodel_y9bsk6Y
-│       │   │   ├── test__can_delete__mymodel_yYckJks
-│       │   │   ├── test__can_delete__mymodel_zdm3uWU
-│       │   │   └── test__can_delete__mymodel_zlaZeM0
 │       │   ├── profile_images
-│       │   │   ├── 1644424797237.jpg
-│       │   │   ├── 1644424797237_6JDGp9F.jpg
-│       │   │   ├── 1644424797237_AovDRAA.jpg
-│       │   │   ├── 1644424797237_B1yJGfN.jpg
-│       │   │   ├── 1644424797237_FRnGmIO.jpg
-│       │   │   ├── 1644424797237_co81IJc.jpg
-│       │   │   ├── 1644424797237_z5kuCuO.jpg
-│       │   │   ├── 700-X-394-18-1.png
-│       │   │   ├── 700-X-394-18-1_BmY3OsJ.png
-│       │   │   ├── Pinterest-Logo-2011-present.png
-│       │   │   ├── Pinterest-logo.webp
-│       │   │   ├── Screenshot_2022-04-24_185258.png
-│       │   │   ├── Screenshot_2022-05-04_171326.png
-│       │   │   ├── Software-Engineer.png
-│       │   │   ├── aniyuki-anya-forger-image-55.jpg
-│       │   │   ├── bp_dj_platform_hero_b.jpg
-│       │   │   ├── bp_dj_platform_hero_b_0IPSiCC.jpg
-│       │   │   ├── bp_dj_platform_hero_b_GYwQzPF.jpg
-│       │   │   ├── bp_dj_platform_hero_b_LJz0BOH.jpg
-│       │   │   ├── bp_dj_platform_hero_b_LYlEzBJ.jpg
-│       │   │   ├── bp_dj_platform_hero_b_LaechmL.jpg
-│       │   │   ├── bp_dj_platform_hero_b_LdX8afv.jpg
-│       │   │   ├── bp_dj_platform_hero_b_S4pjzsE.jpg
-│       │   │   ├── bp_dj_platform_hero_b_VyRSk7O.jpg
-│       │   │   ├── bp_dj_platform_hero_b_am8lcym.jpg
-│       │   │   ├── bp_dj_platform_hero_b_dKP0PjO.jpg
-│       │   │   ├── bp_dj_platform_hero_b_rZrbrGY.jpg
-│       │   │   ├── bp_dj_platform_hero_b_xaHB2yo.jpg
-│       │   │   ├── kimetsu-no-yaiba-demon-slayer.gif
-│       │   │   ├── photo_2023-06-18_01-51-26.jpg
-│       │   │   ├── photo_2023-06-18_01-51-26_r50bptQ.jpg
-│       │   │   └── wp3083308.jpg
 │       │   └── standard
 │       │       ├── chatroom.png
 │       │       └── profile_img.jpg
 │       ├── post
 │       │   ├── __init__.py
-│       │   ├── __pycache__
-│       │   │   ├── __init__.cpython-311.pyc
-│       │   │   ├── __init__.cpython-38.pyc
-│       │   │   ├── admin.cpython-311.pyc
-│       │   │   ├── admin.cpython-38.pyc
-│       │   │   ├── apps.cpython-311.pyc
-│       │   │   ├── apps.cpython-38.pyc
-│       │   │   ├── model_factories.cpython-38.pyc
-│       │   │   ├── models.cpython-311.pyc
-│       │   │   ├── models.cpython-38.pyc
-│       │   │   ├── serializers.cpython-311.pyc
-│       │   │   ├── serializers.cpython-38.pyc
-│       │   │   ├── tests.cpython-38.pyc
-│       │   │   ├── urls.cpython-311.pyc
-│       │   │   ├── urls.cpython-38.pyc
-│       │   │   ├── views.cpython-311.pyc
-│       │   │   └── views.cpython-38.pyc
 │       │   ├── admin.py
 │       │   ├── apps.py
-│       │   ├── migrations
-│       │   │   ├── 0001_initial.py
-│       │   │   ├── 0002_alter_post_image.py
-│       │   │   ├── 0003_alter_post_date_created.py
-│       │   │   ├── 0004_alter_post_user.py
-│       │   │   ├── 0005_likes_comments.py
-│       │   │   ├── 0006_alter_likes_unique_together.py
-│       │   │   ├── 0007_alter_comments_post_id_alter_likes_post_id_and_more.py
-│       │   │   ├── 0008_rename_comments_comment_rename_likes_like.py
-│       │   │   ├── __init__.py
-│       │   │   └── __pycache__
-│       │   │       ├── 0001_initial.cpython-311.pyc
-│       │   │       ├── 0001_initial.cpython-38.pyc
-│       │   │       ├── 0002_alter_post_image.cpython-311.pyc
-│       │   │       ├── 0002_alter_post_image.cpython-38.pyc
-│       │   │       ├── 0003_alter_post_date_created.cpython-311.pyc
-│       │   │       ├── 0003_alter_post_date_created.cpython-38.pyc
-│       │   │       ├── 0004_alter_post_user.cpython-311.pyc
-│       │   │       ├── 0004_alter_post_user.cpython-38.pyc
-│       │   │       ├── 0005_likes_comments.cpython-311.pyc
-│       │   │       ├── 0005_likes_comments.cpython-38.pyc
-│       │   │       ├── 0006_alter_likes_unique_together.cpython-311.pyc
-│       │   │       ├── 0006_alter_likes_unique_together.cpython-38.pyc
-│       │   │       ├── 0007_alter_comments_post_id_alter_likes_post_id_and_more.cpython-311.pyc
-│       │   │       ├── 0007_alter_comments_post_id_alter_likes_post_id_and_more.cpython-38.pyc
-│       │   │       ├── 0008_rename_comments_comment_rename_likes_like.cpython-311.pyc
-│       │   │       ├── 0008_rename_comments_comment_rename_likes_like.cpython-38.pyc
-│       │   │       ├── __init__.cpython-311.pyc
-│       │   │       └── __init__.cpython-38.pyc
 │       │   ├── model_factories.py
 │       │   ├── models.py
 │       │   ├── serializers.py
@@ -485,17 +125,6 @@ Private messaging and group chats
 │       │   └── views.py
 │       └── socialnetworkbackend
 │           ├── __init__.py
-│           ├── __pycache__
-│           │   ├── __init__.cpython-311.pyc
-│           │   ├── __init__.cpython-38.pyc
-│           │   ├── routing.cpython-311.pyc
-│           │   ├── routing.cpython-38.pyc
-│           │   ├── settings.cpython-311.pyc
-│           │   ├── settings.cpython-38.pyc
-│           │   ├── urls.cpython-311.pyc
-│           │   ├── urls.cpython-38.pyc
-│           │   ├── wsgi.cpython-311.pyc
-│           │   └── wsgi.cpython-38.pyc
 │           ├── asgi.py
 │           ├── routing.py
 │           ├── settings.py
