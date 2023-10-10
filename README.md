@@ -3,7 +3,7 @@
 <img src="https://cdn-icons-png.flaticon.com/512/5500/5500939.png" width="100" />
 <br>Connect!
 </h1>
-<h3>◦ Connecting through barriers</h3>
+<h3>◦ Connecting beyond barriers</h3>
 <h3>◦ Developed with the software and tools listed below.</h3>
 
 <p align="center"> 
