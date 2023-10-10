@@ -2,6 +2,8 @@
 /env
 /socialnetworkbackend/.env
 
+migrations
+
 *.log
 *.pot
 *.pyc
