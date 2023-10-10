@@ -44,17 +44,17 @@
 
 ## 📍 Overview
 
-This project is a full-stack social networking platform where users can connect with each other globally. Through the intention of learning each other’s native languages, we seek to foster connections overcoming the language barrier.
+This project is a full-stack social networking platform where users can connect with each other globally. Through the intention of learning each other’s native languages, we seek to foster connections and overcoming the language barrier.
 
 ---
 
 ## ⚙️ Features
 
-User authentication
-Profile management
-Connection management
-User post and feed browsing
-Private messaging and group chats
+- User authentication
+- Profile management
+- Connection management
+- User post and feed browsing
+- Private messaging and group chats
 
 ---
 
