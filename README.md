@@ -6,23 +6,25 @@
 <h3>◦ Connecting through barriers</h3>
 <h3>◦ Developed with the software and tools listed below.</h3>
 
-<p align="center">
-<img src="https://img.shields.io/badge/.ENV-ECD53F.svg?style&logo=dotenv&logoColor=black" alt=".ENV" />
+<p align="center"> 
+<img src="https://img.shields.io/badge/DJANGO-REST-ff1709?style&logoColor=white" alt="Django REST" />
+<img src="https://img.shields.io/badge/angular-%23DD0031.svg?style&logo=angular&logoColor=white" alt="Angular" />
+<img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style&logo=sqlite&logoColor=white" alt="SQLite" />
+
+<img src="https://img.shields.io/badge/Redis-DC382D.svg?style&logo=Redis&logoColor=white" alt="Redis" />
 <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style&logo=HTML5&logoColor=white" alt="HTML5" />
 <img src="https://img.shields.io/badge/Jasmine-8A4182.svg?style&logo=Jasmine&logoColor=white" alt="Jasmine" />
 <img src="https://img.shields.io/badge/Bootstrap-7952B3.svg?style&logo=Bootstrap&logoColor=white" alt="Bootstrap" />
 <img src="https://img.shields.io/badge/ESLint-4B32C3.svg?style&logo=ESLint&logoColor=white" alt="ESLint" />
 
 <img src="https://img.shields.io/badge/Python-3776AB.svg?style&logo=Python&logoColor=white" alt="Python" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style&logo=TypeScript&logoColor=white" alt="TypeScript" />
-<img src="https://img.shields.io/badge/Markdown-000000.svg?style&logo=Markdown&logoColor=white" alt="Markdown" />
-<img src="https://img.shields.io/badge/Express-000000.svg?style&logo=Express&logoColor=white" alt="Express" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style&logo=TypeScript&logoColor=white" alt="TypeScript" /> 
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style&logo=JavaScript&logoColor=black" alt="JavaScript" />
 <img src="https://img.shields.io/badge/JSON-000000.svg?style&logo=JSON&logoColor=white" alt="JSON" />
 </p>
 <img src="https://img.shields.io/github/languages/top/dubstep-warrior/connect?style&color=5D6D7E" alt="GitHub top language" />
 <img src="https://img.shields.io/github/languages/code-size/dubstep-warrior/connect?style&color=5D6D7E" alt="GitHub code size in bytes" />
-<img src="https://img.shields.io/github/commit-activity/m/dubstep-warrior/connect?style&color=5D6D7E" alt="GitHub commit activity" />
-<img src="https://img.shields.io/github/license/dubstep-warrior/connect?style&color=5D6D7E" alt="GitHub license" />
+<img src="https://img.shields.io/github/commit-activity/m/dubstep-warrior/connect?style&color=5D6D7E" alt="GitHub commit activity" /> 
 </div>
 
 ---
@@ -35,9 +37,7 @@
 - [🧩 Modules](#modules)
 - [🚀 Getting Started](#-getting-started)
 - [🗺 Roadmap](#-roadmap)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [👏 Acknowledgments](#-acknowledgments)
+- [🤝 Contributing](#-contributing) 
 
 ---
 
@@ -790,16 +790,4 @@ git push origin new-feature-branch
 7. Create a new pull request to the original project repository. In the pull request, describe the changes you've made and why they're necessary.
 The project maintainers will review your changes and provide feedback or merge them into the main branch.
 
----
-
-## 📄 License
-
-This project is licensed under the `ℹ️  INSERT-LICENSE-TYPE` License. See the [LICENSE](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository) file for additional info.
-
----
-
-## 👏 Acknowledgments
-
-> - `ℹ️  List any resources, contributors, inspiration, etc.`
-
----
+--- 
