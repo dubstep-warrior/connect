@@ -523,9 +523,7 @@ This project is a full-stack social networking platform where users can connect 
 
 | File                                                                                                                      | Summary                                                                                                                                                                                                                                                                                                                                |
 | ---                                                                                                                       | ---                                                                                                                                                                                                                                                                                                                                    |
-| [shared.module.ts](https://github.com/dubstep-warrior/connect/blob/main/project-frontend/src/app/shared/shared.module.ts) | This code is creating a shared module in Angular that includes various components and dependencies such as menu, post, feed, image, and profile-tag. It also imports and exports various modules and components for use in other modules. The SharedModule aims to provide a centralized location for reusable components and modules. |
-| [_mixins.scss](https://github.com/dubstep-warrior/connect/blob/main/project-frontend/src/shared/_mixins.scss)             | Exception: <ConnectionTerminated error_code:ErrorCodes.NO_ERROR, last_stream_id:239, additional_data:None>                                                                                                                                                                                                                             |
-| [_variables.scss](https://github.com/dubstep-warrior/connect/blob/main/project-frontend/src/shared/_variables.scss)       | Exception: <ConnectionTerminated error_code:ErrorCodes.NO_ERROR, last_stream_id:239, additional_data:None>                                                                                                                                                                                                                             |
+| [shared.module.ts](https://github.com/dubstep-warrior/connect/blob/main/project-frontend/src/app/shared/shared.module.ts) | This code is creating a shared module in Angular that includes various components and dependencies such as menu, post, feed, image, and profile-tag. It also imports and exports various modules and components for use in other modules. The SharedModule aims to provide a centralized location for reusable components and modules. | 
 
 </details>
 
@@ -656,14 +654,7 @@ This project is a full-stack social networking platform where users can connect 
 | [date-as-ago.pipe.ts](https://github.com/dubstep-warrior/connect/blob/main/project-frontend/src/app/core/pipes/date-as-ago/date-as-ago.pipe.ts)           | The DateAsAgoPipe is an Angular pipe that allows for the transformation of a given date value into a human-readable format representing its age relative to the current time. It provides a concise output such as'just now','a moment ago', or the approximate number of seconds, minutes, hours, days, months, or years since the provided date value. This pipe is useful for displaying timestamps in a more user-friendly manner. |
 
 </details>
-
-<details closed><summary>Safe-url</summary>
-
-| File                                                                                                                                   | Summary                                                                                                    |
-| ---                                                                                                                                    | ---                                                                                                        |
-| [safe-url.pipe.ts](https://github.com/dubstep-warrior/connect/blob/main/project-frontend/src/app/core/pipes/safe-url/safe-url.pipe.ts) | Exception: <ConnectionTerminated error_code:ErrorCodes.NO_ERROR, last_stream_id:239, additional_data:None> |
-
-</details>
+ 
 
 <details closed><summary>Interceptor</summary>
 
@@ -673,20 +664,13 @@ This project is a full-stack social networking platform where users can connect 
 | [auth.interceptor.ts](https://github.com/dubstep-warrior/connect/blob/main/project-frontend/src/app/core/interceptor/auth.interceptor.ts)           | The provided code is an Angular HTTP interceptor that adds an Authorization header to outgoing HTTP requests. It checks if there is a current user in local storage, and if so, it modifies the request headers by adding an "Authorization" header with the user's token. Otherwise, it passes the request unchanged. |
 
 </details>
-
-<details closed><summary>Environments</summary>
-
-| File                                                                                                                    | Summary                                                                                                    |
-| ---                                                                                                                     | ---                                                                                                        |
-| [environment.ts](https://github.com/dubstep-warrior/connect/blob/main/project-frontend/src/environments/environment.ts) | Exception: <ConnectionTerminated error_code:ErrorCodes.NO_ERROR, last_stream_id:239, additional_data:None> |
-
-</details>
+ 
 
 <details closed><summary>Socialnetworkbackend</summary>
 
 | File                                                                                                                                      | Summary                                                                                                                                                                                                                                                                                                                          |
 | ---                                                                                                                                       | ---                                                                                                                                                                                                                                                                                                                              |
-| [manage.py](https://github.com/dubstep-warrior/connect/blob/main/project-backend/socialnetworkbackend/manage.py)                          | Exception: <ConnectionTerminated error_code:ErrorCodes.NO_ERROR, last_stream_id:239, additional_data:None>                                                                                                                                                                                                                       |
+
 | [asgi.py](https://github.com/dubstep-warrior/connect/blob/main/project-backend/socialnetworkbackend/socialnetworkbackend/asgi.py)         | This code is the ASGI (Asynchronous Server Gateway Interface) configuration file for the socialnetworkbackend project. It sets up the Django application and exposes it as the ASGI callable module-level variable named "application". This file is used for deployment to handle asynchronous requests.                        |
 | [urls.py](https://github.com/dubstep-warrior/connect/blob/main/project-backend/socialnetworkbackend/socialnetworkbackend/urls.py)         | The code includes URL configurations for different modules such as account management, authentication, post feed, connections, and chat. It also handles static file serving in DEBUG mode.                                                                                                                                      |
 | [routing.py](https://github.com/dubstep-warrior/connect/blob/main/project-backend/socialnetworkbackend/socialnetworkbackend/routing.py)   | This code sets up a protocol router for handling WebSocket connections. It applies token-based authentication and host origin validation before routing requests to the appropriate WebSocket URL patterns defined in the chat.routing module. The router is part of a larger application for implementing a chat functionality. |
@@ -725,46 +709,79 @@ This project is a full-stack social networking platform where users can connect 
 ### ✔️ Prerequisites
 
 Before you begin, ensure that you have the following prerequisites installed:
-> - `ℹ️ Requirement 1`
-> - `ℹ️ Requirement 2`
-> - `ℹ️ ...`
+> - `ℹ️ Node`
+> - `ℹ️ Node Package Manager`
+> - `ℹ️ Python`
+> - `ℹ️ Preferred Installer Program (PIP)`
+> - `ℹ️ Redis (Recommended to install on WSL for Windows users)`
 
-### 📦 Installation
+### 📦 Installation 
 
-1. Clone the connect repository:
+Clone the connect repository:
 ```sh
 git clone https://github.com/dubstep-warrior/connect
-```
+```  
 
-2. Change to the project directory:
+#### 🎮 Frontend
+
+1. Change to the project directory:
 ```sh
-cd connect
+cd connect/project-frontend
 ```
 
-3. Install the dependencies:
+2. Install the dependencies:
 ```sh
 npm install
 ```
 
-### 🎮 Using connect
-
+3. Run application
 ```sh
-npm run build && node dist/main.js
+npm start
 ```
 
-### 🧪 Running Tests
+#### 🧪 Backend
+
+1. Change to the project directory:
 ```sh
-npm test
+cd connect/project-backend
 ```
 
+2. Create a virtual environment
+```sh
+py -m venv env
+```
+
+3. Activate the virtual environment
+```sh
+env\Scripts\activate
+```
+
+4. Install dependencies
+```sh
+pip install -r requirements.txt
+```
+
+5. Change to the application directory
+```sh
+cd socialnetworkbackend
+```
+
+6. Start the server application
+```sh
+py manage.py runserver
+```
+
+7. Run the Redis database (On WSL for windows users)
+```bash
+redis-server
+```
 ---
 
 
 ## 🗺 Roadmap
 
-> - [X] `ℹ️  Task 1: Implement X`
-> - [ ] `ℹ️  Task 2: Refactor Y`
-> - [ ] `ℹ️ ...`
+> - [ ] `ℹ️  Task 1: Implement mobile responsiveness for frontend`
+> - [ ] `ℹ️  Task 2: Implement translation feature` 
 
 
 ---
