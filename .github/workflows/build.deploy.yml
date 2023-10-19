@@ -17,7 +17,10 @@ jobs:
 
     strategy: 
       matrix:
-        subDir: ["backend"] 
+        subDir: [ 
+          {name: "backend", portBinding: "8000:8000"}, 
+          {name: "frontend", portBinding: "8082:3000"},  
+        ]
 
     steps:
       - name: Checkout
@@ -43,16 +46,17 @@ jobs:
           # Build a docker container and
           # push it to ECR so that it can
           # be deployed to ECS.
-          cd project-${{ matrix.subDir }}
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir }}:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir }}:$IMAGE_TAG
-          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir }}:$IMAGE_TAG" >> $GITHUB_OUTPUT 
+          cd project-${{ matrix.subDir.name }}
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir.name }}:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir.name }}:$IMAGE_TAG
+          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir.name }}:$IMAGE_TAG" >> $GITHUB_OUTPUT 
 
       - name: Deploy ECR image to EC2
         env: 
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry  }}
           IMAGE_TAG: ${{ github.sha }}
-          SUB_DIR: ${{ matrix.subDir }}
+          SUB_DIR: ${{ matrix.subDir.name }}
+          PORT: ${{ matrix.subDir.portBinding }}
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.EC2_HOST }}
@@ -67,4 +71,4 @@ jobs:
             aws ecr get-login-password --region $AWS_REGION | sudo docker login --username AWS --password-stdin $ACC_ID.dkr.ecr.$AWS_REGION.amazonaws.com    
             sudo service docker start || true   
             sudo docker pull $ECR_REGISTRY/$ECR_REPOSITORY-$SUB_DIR:$IMAGE_TAG
-            sudo docker run -d --name $ECR_REPOSITORY-$SUB_DIR -p 8000:8000 $ECR_REGISTRY/$ECR_REPOSITORY-$SUB_DIR:$IMAGE_TAG
+            sudo docker run -d --name $ECR_REPOSITORY-$SUB_DIR -p $PORT $ECR_REGISTRY/$ECR_REPOSITORY-$SUB_DIR:$IMAGE_TAG
