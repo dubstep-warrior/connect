@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          context: "{{defaultContext}}:project-${{ matrix.subDir }}"
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@0e613a0980cbf65ed5b322eb7a1e075d28913a83
@@ -45,9 +47,7 @@ jobs:
           # be deployed to ECS.
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir }}:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir }}:$IMAGE_TAG
-          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir }}:$IMAGE_TAG" >> $GITHUB_OUTPUT
-        with:
-          context: "{{defaultContext}}:project-${{ matrix.subDir }}"
+          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir }}:$IMAGE_TAG" >> $GITHUB_OUTPUT 
 
       - name: Deploy ECR image to EC2
         env: 
