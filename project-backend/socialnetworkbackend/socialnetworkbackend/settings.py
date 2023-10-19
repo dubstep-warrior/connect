@@ -168,6 +168,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8082",
     "http://localhost:62575",
     "http://127.0.0.1:62575",
+    "http://18.139.209.125/8082"
 ]
 
 AUTH_USER_MODEL = 'account.AppUser'
