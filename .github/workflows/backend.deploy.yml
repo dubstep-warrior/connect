@@ -1,4 +1,4 @@
-name: CD Build and Deploy
+name: CD Build and Deploy Backend
 
 on:
   workflow_run:
