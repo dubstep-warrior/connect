@@ -19,8 +19,8 @@ jobs:
     strategy: 
       matrix:
         subDir: [ 
-          {name: "backend", portBinding: "${{ secrets.BACKEND_PORT_MAPPING }}"}, 
-          {name: "frontend", portBinding: "${{ secrets.FRONTEND_PORT_MAPPING }}"},  
+          {name: "backend", portBinding: "8000:8000"}, 
+          {name: "frontend", portBinding: "8082:3000"},  
         ]
 
     steps:
