@@ -9,7 +9,8 @@ on:
 env:
   AWS_REGION: ap-southeast-1               
   ECR_REPOSITORY: connect           
-  ACC_ID: 257563045923
+  ACC_ID: 257563045923 
+
       
 jobs:
   build-push-deploy:
@@ -18,8 +19,8 @@ jobs:
     strategy: 
       matrix:
         subDir: [ 
-          {name: "backend", portBinding: "8000:8000"}, 
-          {name: "frontend", portBinding: "8082:3000"},  
+          {name: "backend", portBinding: "${{ secrets.BACKEND_PORT_MAPPING }}"}, 
+          {name: "frontend", portBinding: "${{ secrets.FRONTEND_PORT_MAPPING }}"},  
         ]
 
     steps:
@@ -62,7 +63,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
-          envs: ECR_REGISTRY,IMAGE_TAG,ECR_REPOSITORY,AWS_REGION,ACC_ID,SUB_DIR
+          envs: ECR_REGISTRY,IMAGE_TAG,ECR_REPOSITORY,AWS_REGION,ACC_ID,SUB_DIR,PORT
           script: |
             sudo yum update -y
             sudo yum install docker -y 
