@@ -1,5 +1,5 @@
 <app-menu [user]="data.currentUser"></app-menu> 
-<div *ngIf="!data.currentUser" [class.homepage]="!data.currentUser" [ngStyle]="!data.currentUser ? {background: 'url(./assets/images/homepage.jpg'} : {}">
+<div *ngIf="!data.currentUser" [class.homepage]="!data.currentUser" [ngStyle]="!data.currentUser ? {background: 'url(./assets/images/homepage.jpg)'} : {}">
     <router-outlet></router-outlet>
 </div>
 <router-outlet *ngIf="data.currentUser"></router-outlet>
