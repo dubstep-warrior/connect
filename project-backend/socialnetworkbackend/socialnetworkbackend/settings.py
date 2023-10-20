@@ -169,7 +169,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:62575",
     "http://127.0.0.1:62575",
     "http://18.139.209.125:8082",
-    "https://dubstep-warrior.com/"
+    "https://dubstep-warrior.com"
 ]
 
 AUTH_USER_MODEL = 'account.AppUser'
