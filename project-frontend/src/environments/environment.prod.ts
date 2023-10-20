@@ -3,6 +3,6 @@
 
 export const environment = {
     production: true,
-    endpoint_url_backend_api: 'http://18.139.209.125:8000',
+    endpoint_url_backend_api: 'https://backend.dubstep-warrior.com/app/connect',
   };
    
