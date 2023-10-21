@@ -1,5 +1,5 @@
 <section class="row">
-  <div class="col-4">
+  <div [class.mobile-hide]="!!currentChat" class="col-4">
     <div *ngIf="user">
       <!-- <app-profile-tag [user]="user"></app-profile-tag> -->
       <app-image [src]="user.profile_img ?? '/media/standard/profile_img.jpg'" config="post-profile"></app-image>
@@ -8,7 +8,7 @@
       </button>
       <mat-menu xPosition="before" #menu="matMenu">
         <button mat-menu-item (click)="newGroup()">New group</button>
-        <button mat-menu-item (click)="showContacts()">Contacts</button>
+        <button *ngIf="!!contacts.length" mat-menu-item (click)="showContacts()">Contacts</button>
       </mat-menu>
     </div>
     <div>
@@ -38,6 +38,13 @@
           config="post-profile"
           [status]="true"
         ></app-profile-tag> -->
+        <div class="button">
+          <div>
+            <label for="file-input" (click)="disconnect()">
+              <mat-icon>arrow_back_ios</mat-icon>
+            </label> 
+          </div>
+        </div>
         <img
           [src]="'http://localhost:8000' + (currentChat.chatroom ? currentChat.image : currentChat.to_user.profile_img)"
         />

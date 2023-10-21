@@ -6,6 +6,12 @@
         <li [class.selected]="selectedTitle == 'incoming'" (click)="selectTitle('incoming')">Incoming requests</li>
         <li [class.selected]="selectedTitle == 'current'" (click)="selectTitle('current')">Current connections</li> 
     </ul>
+    <ul class="mobile row">
+        <li class="col" [class.selected]="selectedTitle == 'find'" (click)="selectTitle('find')"><mat-icon>group_add</mat-icon></li>
+        <li class="col" [class.selected]="selectedTitle == 'outgoing'" (click)="selectTitle('outgoing')"><mat-icon>keyboard_double_arrow_up</mat-icon></li>
+        <li class="col" [class.selected]="selectedTitle == 'incoming'" (click)="selectTitle('incoming')"><mat-icon>keyboard_double_arrow_down</mat-icon></li>
+        <li class="col" [class.selected]="selectedTitle == 'current'" (click)="selectTitle('current')"><mat-icon>people</mat-icon></li> 
+    </ul>
   </div>
   <div class="col-8">
      <div>
@@ -35,3 +41,4 @@
      </div>
   </div>
 </section>
+ 

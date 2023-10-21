@@ -34,5 +34,9 @@ section {
   &.feed {
     margin: auto;
     padding: 48px 144px;
+
+    @include screen-small {
+      padding: 24px;
+    }
   }
 }

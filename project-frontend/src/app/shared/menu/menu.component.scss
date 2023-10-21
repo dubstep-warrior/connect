@@ -1,9 +1,15 @@
 @use "variables" as *;
+@use "mixins" as *; 
 
 section {
   max-width: 100%;
   margin: auto;
   background-color: $standardGrey;
+
+  @include screen-small {
+    position: fixed;
+    inset: auto 0 0 0; 
+  }
 
   > div {
     display: flex;
@@ -15,18 +21,42 @@ section {
       list-style: none;
       display: flex;
 
-      li {
+      &.mobile {
+        display: none;
+      }
+
+      @include screen-small {
+        display: none;
+        
+        &.mobile {
+          display: flex; 
+          gap: 20px;
+        }
+      }
+ 
+
+      &:not(.mobile) > li {
         padding: 16px 24px;
 
         &:hover {
           background-color: $standardLightGrey;
           cursor: pointer;
-        }
+        } 
 
         &.selected {
           border-bottom: 2px solid black;
         }
       }
+
+      &.mobile > li {
+        padding: 12px;
+
+        &.selected {
+          border-top: 2px solid black;
+        }
+      }
     }
   }
 }
+
+ 

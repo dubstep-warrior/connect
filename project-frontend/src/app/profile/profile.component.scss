@@ -4,6 +4,16 @@
 section {
   margin: 48px auto;
 
+  @include screen-small {
+    flex-direction: column;
+    margin: 12px;
+    gap: 24px;
+    
+    > * {
+      width: auto;
+    }
+  }
+
   > .col-4 {
     > * {
       margin-bottom: 8px;

@@ -14,34 +14,6 @@ section {
       box-shadow: none;
       resize: none;
     }
-
-    .image-upload {
-      cursor: pointer;
-      margin-bottom: 8px;
-
-      > div {
-        @include flex;
-        justify-content: flex-end;
-
-        > label {
-          @include flex;
-          padding: 8px;
-          align-items: center;
-          width: min-content;
-          border-radius: 50px;
-          border: 1px solid $standardLightGrey;
-          cursor: pointer;
-
-          &:hover {
-            background-color: $standardSuperLightGrey;
-          }
-        }
-
-        > input {
-          display: none;
-        }
-      }
-    }
   }
 
   > div {

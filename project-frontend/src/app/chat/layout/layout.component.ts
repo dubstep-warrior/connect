@@ -32,7 +32,7 @@ export class LayoutComponent extends Base implements AfterViewInit {
 
   async ngAfterViewInit(): Promise<void> {
     this.service.user.pipe(this.takeUntilDestroy()).subscribe((data) => {
-      this.user = data; 
+      this.user = data;
     });
     this.service.contacts.pipe(this.takeUntilDestroy()).subscribe((data) => {
       this.contacts = data;
@@ -41,20 +41,20 @@ export class LayoutComponent extends Base implements AfterViewInit {
       this.chats = data.map((chat: any) => {
         const chatData = chat.name
           ? {
-              ...chat,
-              image: chat.image ?? '/media/standard/chatroom.png',
-            }
+            ...chat,
+            image: chat.image ?? '/media/standard/chatroom.png',
+          }
           : {
-              ...chat,
-              to_user: chat.users.find(
-                (user: any) =>
-                  user.id !==
-                  JSON.parse(localStorage.getItem('currentUser') as string)[
-                    'user_id'
-                  ]
-              ),
-            };
-        if(chatData.to_user) {
+            ...chat,
+            to_user: chat.users.find(
+              (user: any) =>
+                user.id !==
+                JSON.parse(localStorage.getItem('currentUser') as string)[
+                'user_id'
+                ]
+            ),
+          };
+        if (chatData.to_user) {
           chatData.to_user.profile_img = chatData.to_user.profile_img ?? '/media/standard/profile_img.jpg'
         }
         return chatData
@@ -63,32 +63,32 @@ export class LayoutComponent extends Base implements AfterViewInit {
     this.service.currentChat.pipe(this.takeUntilDestroy()).subscribe((data) => {
       this.currentChat = data.chatroom
         ? {
-            ...data,
-            image: data.image ?? '/media/standard/chatroom.png',
-            form: new FormGroup({ 
-              message: new FormControl(''),
-              chat: new FormControl(data.id),
-            }),
-          }
+          ...data,
+          image: data.image ?? '/media/standard/chatroom.png',
+          form: new FormGroup({
+            message: new FormControl(''),
+            chat: new FormControl(data.id),
+          }),
+        }
         : {
-            ...data,
-            form: new FormGroup({ 
-              message: new FormControl(''),
-              chat: new FormControl(data.id),
-            }),
-            to_user: {
-              ...data.users.find(
-                (user: any) =>
-                  user.id !==
-                  JSON.parse(localStorage.getItem('currentUser') as string)[
-                    'user_id'
-                  ]
-              ),
-            },
-          };
-        if(this.currentChat.to_user) {
-          this.currentChat.to_user.profile_img = this.currentChat.to_user.profile_img ?? '/media/standard/profile_img.jpg'
-        } 
+          ...data,
+          form: new FormGroup({
+            message: new FormControl(''),
+            chat: new FormControl(data.id),
+          }),
+          to_user: {
+            ...data.users.find(
+              (user: any) =>
+                user.id !==
+                JSON.parse(localStorage.getItem('currentUser') as string)[
+                'user_id'
+                ]
+            ),
+          },
+        };
+      if (this.currentChat.to_user) {
+        this.currentChat.to_user.profile_img = this.currentChat.to_user.profile_img ?? '/media/standard/profile_img.jpg'
+      }
     });
     this.service.messages.pipe(this.takeUntilDestroy()).subscribe((data) => {
       this.currentChat.messages.push(data);
@@ -153,7 +153,7 @@ export class LayoutComponent extends Base implements AfterViewInit {
 
     overlay.afterClosed$.subscribe(async (data) => {
       if (data) {
-        if (data.chat_id) { 
+        if (data.chat_id) {
           this.selectChat({
             id: data.chat_id,
           });
@@ -187,22 +187,31 @@ export class LayoutComponent extends Base implements AfterViewInit {
     });
   }
 
+  disconnect() {
+    this.currentChat = null
+    this.state = {
+      loading: false,
+      loadingChatId: null,
+    };
+    this.service.closeChat()
+  }
+
   selectChat(chat: any): void {
     this.currentChat = null;
     this.state = {
       loading: true,
       loadingChatId: chat.id,
     };
-    this.service.selectChat(chat.id); 
+    this.service.selectChat(chat.id);
   }
 
   async sendMessage(form: FormGroup): Promise<void> {
     if (form.value.chat) {
       await this.service.sendMessage(form.value);
       form.get('message')?.reset();
-    } else { 
+    } else {
       const res = await this.service.sendFirstMessage(form);
-      if (res && (res as any).success) { 
+      if (res && (res as any).success) {
         this.service.chats.next((res as any).data.chats);
         this.selectChat((res as any).data.currentChat);
       }

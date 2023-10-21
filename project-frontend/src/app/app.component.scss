@@ -1,21 +1,41 @@
 @use "mixins" as *;
 
-div {
-    &.homepage { 
-        max-width: none !important; 
-        height: calc(100vh - 56px);
-        width: 100vw; 
-        background-size: cover !important;
-        position: relative;
-        > img {
-            position: absolute;
-            inset: 0 0 0 0;
-            width: 100%;
-            height: 100%;
-        }
+section {
+    width: 100%;
+    max-width: 100% !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
-        > div {
-            margin: auto;
+    div:not(.mobile-menu-ghost) {
+        flex-grow: 1;
+        // @include screen-small {
+        //     overflow: scroll;
+        // }
+        
+        &.homepage { 
+            max-width: none !important;  
+            background-size: cover !important;
+            position: relative;
+            > img {
+                position: absolute;
+                inset: 0 0 0 0;
+                width: 100%;
+                height: 100%;
+            }
+    
+            > div {
+                margin: auto;
+            }
+        }
+    }
+    
+    .mobile-menu-ghost {
+        display: none;
+
+        @include screen-small {
+            display: block;
+            height: 56px;
         }
     }
 }
