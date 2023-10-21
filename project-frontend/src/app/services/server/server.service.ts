@@ -26,6 +26,10 @@ export class ServerService {
     });
   }
 
+  validateAuth(): any {
+    return this.request('GET', `${this.url}/accounts/api/auth/validate`);
+  }
+
   login(event: any): any {
     return this.request('POST', `${this.url}/accounts/api/auth/`, event);
   }
