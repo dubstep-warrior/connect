@@ -9,8 +9,8 @@ application = ProtocolTypeRouter({
     OriginValidator(
         URLRouter(
             chat.routing.websocket_urlpatterns
-        )
-    ),
-    ["https://app.dubstep-warrior.com"],
+        ),
+        ["https://app.dubstep-warrior.com"]
+    ), 
     ),
 })
