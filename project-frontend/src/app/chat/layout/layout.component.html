@@ -44,10 +44,11 @@
               <mat-icon>arrow_back_ios</mat-icon>
             </label> 
           </div>
-        </div>
-        <img
-          [src]="'http://localhost:8000' + (currentChat.chatroom ? currentChat.image : currentChat.to_user.profile_img)"
-        />
+        </div> 
+        <app-image
+            [src]="currentChat.chatroom ? currentChat.image : currentChat.to_user.profile_img"
+            config="post-profile"
+          ></app-image>
         <div>{{ currentChat.chatroom ? currentChat.name : '@' + currentChat.to_user.handle }}</div>
       </div>
       <app-chatlog [currentChat]="currentChat" [user]="user"></app-chatlog>
