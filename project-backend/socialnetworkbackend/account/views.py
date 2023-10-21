@@ -43,7 +43,14 @@ class ProfileView(APIView):
             }, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
+class ValidateAuth(APIView):    
+    permission_classes = [IsAuthenticated]  
 
+    def get(self, request, pk= None):   
+       return Response({
+            'success': True, 
+        }, status=status.HTTP_200_OK)
+    
 class CustomAuthToken(ObtainAuthToken):
 
     def post(self, request, *args, **kwargs):

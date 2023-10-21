@@ -16,7 +16,15 @@ const httpOptions = {
 export class AuthService { 
   token: string | null;
   error: Subject<any> = new Subject();
-  constructor(private http: HttpClient, private service: ServerService, private router: Router) { }
+  constructor(private http: HttpClient, private service: ServerService, private router: Router) { 
+    this.init()
+  }
+
+  async init() {
+    const res = await this.service.validateAuth()
+    if(res && res.success) return;
+    this.logout()
+  }
 
   async login(username: string, password: string) { 
     const res = await this.service.login({username, password})
