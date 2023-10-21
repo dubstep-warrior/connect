@@ -4,6 +4,6 @@
 export const environment = {
     production: true,
     endpoint_url_backend_api: `https://${BASE_URL}`,
-    ws_url_backend_api: `ws://${BASE_URL}/ws/`
+    ws_url_backend_api: `'wss://${BASE_URL}/ws/`
   };
    
