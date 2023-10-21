@@ -10,4 +10,6 @@ migrations
 __pycache__/
 local_settings.py
 db.sqlite3
-media
+chatroom_images
+post_images
+profile_images
