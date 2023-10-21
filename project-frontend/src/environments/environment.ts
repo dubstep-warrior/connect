@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  endpoint_url_backend_api: 'http://localhost:8000',
+  endpoint_url_backend_api: 'localhost:8000',
 };
 
 /* 

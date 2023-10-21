@@ -6,8 +6,9 @@ import { AnonymousSubject } from 'rxjs/internal/Subject';
 import { Base } from 'src/app/core/directives/base.directive';
 import { WebSocketService } from '../websocket/web-socket.service';
 import { FormGroup } from '@angular/forms';
+import { environment } from '../../../environments/environment';
 
-const CHAT_URL = 'ws://localhost:8000/ws/';
+const CHAT_URL = `ws://${environment.endpoint_url_backend_api}/ws/`;
 
 @Injectable({
   providedIn: 'root',
