@@ -9,7 +9,7 @@ export class ServerService {
   url: string;
 
   constructor(private http: HttpClient) {
-    this.url = `http://${environment.endpoint_url_backend_api}`;
+    this.url = environment.endpoint_url_backend_api;
   }
 
   private async request(method: string, url: string, data?: any) {

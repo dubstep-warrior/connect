@@ -8,7 +8,7 @@ import { WebSocketService } from '../websocket/web-socket.service';
 import { FormGroup } from '@angular/forms';
 import { environment } from '../../../environments/environment';
 
-const CHAT_URL = `ws://${environment.endpoint_url_backend_api}/ws/`;
+const CHAT_URL = environment.ws_url_backend_api;
 
 @Injectable({
   providedIn: 'root',
