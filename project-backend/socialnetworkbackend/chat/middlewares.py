@@ -22,6 +22,8 @@ class TokenAuthMiddleWare:
         query_params = query_string.decode()
         query_dict = parse_qs(query_params)
         token = query_dict["token"][0] 
+        print(token)
         user = await returnUser(token)
+        print(user)
         scope["user"] = user
         return await self.app(scope, receive, send)
