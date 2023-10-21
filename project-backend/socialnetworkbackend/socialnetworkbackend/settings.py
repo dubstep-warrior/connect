@@ -30,7 +30,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!F
 DEBUG = True
 
-ALLOWED_HOSTS = ["backend.dubstep-warrior.com", "localhost"]
+ALLOWED_HOSTS = ["backend.dubstep-warrior.com"]
 
 
 # Application definition
@@ -159,17 +159,8 @@ REST_FRAMEWORK = {
 
 # LOGIN_REDIRECT_URL = '/'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",
-    "http://localhost:3000",
-    "http://localhost:8082",
-    "http://127.0.0.1:4200",
-    "http://127.0.0.1:3000",
-    "http://127.0.0.1:8082",
-    "http://localhost:62575",
-    "http://127.0.0.1:62575",
-    "http://18.139.209.125:8082",
-    "https://dubstep-warrior.com", 
+CORS_ALLOWED_ORIGINS = [ 
+    "https://app.dubstep-warrior.com", 
 ]
 
 AUTH_USER_MODEL = 'account.AppUser'
