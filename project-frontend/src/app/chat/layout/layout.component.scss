@@ -1,19 +1,27 @@
 @use "mixins" as *;
 @use "variables" as *;
-
-:host {
-  display: block;
-  background-color: white;
-  height: calc(100% - 58px);
-}
+ 
 
 section {
   margin: auto;
   background-color: $standardSuperLightGrey;
   height: 100%;
+  position: relative;
 
   > * {
     padding: 0;
+  }
+
+  @include screen-small {
+    > :first-child {
+      position: absolute;
+      background-color: $standardSuperLightGrey;
+      width: 100%;
+    }
+
+    > :last-child {
+      width: 100%;
+    }
   }
 
   > :first-child {
@@ -76,13 +84,27 @@ section {
           padding: 12px 16px;
           background-color: $standardDarkGrey;
 
+          .button {
+            display: none;
+            margin: 0;
+
+            @include screen-small {
+              display: block;
+            }
+
+            label {
+              background-color: transparent;
+              border: 0px;
+            }
+          }
+
           img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
         }
 
-        div {
+        > *:not(:first-child) {
             margin-left: 8px;
             font-size: 14px;
             font-weight: bold;
@@ -149,5 +171,11 @@ section {
         background-color: $standardLightGrey;
         height: 100%;
       }
+  }
+
+  .mobile-hide {
+    @include screen-small {
+      display: none;
+    }
   }
 }

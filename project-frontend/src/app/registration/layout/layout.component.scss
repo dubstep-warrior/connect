@@ -28,10 +28,15 @@
             margin-bottom: 12px;
             min-width: 366px;
 
+            @include screen-small {
+                min-width: 0;
+            }
+
             > div:not(.buttons) {
                 @include flex;
                 width: 100%;
                 justify-content: space-between;
+                flex-wrap: nowrap;
                 margin-bottom: 18px;
                 gap: 12px;
 
@@ -48,6 +53,7 @@
                 width: 100%;
                 align-items: center;
                 justify-content: space-between;
+                flex-wrap: nowrap;
                 gap: 12px;
 
                 > button {

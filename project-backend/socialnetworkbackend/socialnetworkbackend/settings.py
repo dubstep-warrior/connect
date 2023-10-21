@@ -30,7 +30,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!F
 DEBUG = True
 
-ALLOWED_HOSTS = ["backend.dubstep-warrior.com"]
+ALLOWED_HOSTS = ["backend.dubstep-warrior.com", "localhost"]
 
 
 # Application definition
@@ -59,7 +59,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [('localhost', 6379)],
+            "hosts": [('redis://redis:6379')],
         },
     },
 }
@@ -169,7 +169,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:62575",
     "http://127.0.0.1:62575",
     "http://18.139.209.125:8082",
-    "https://dubstep-warrior.com"
+    "https://dubstep-warrior.com", 
 ]
 
 AUTH_USER_MODEL = 'account.AppUser'

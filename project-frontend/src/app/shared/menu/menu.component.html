@@ -11,5 +11,15 @@
         <li [class.selected]="selectedOption == 'login'" *ngIf="!user" [routerLink]="'/login'">Login</li>
         <li [class.selected]="selectedOption == 'registration'" *ngIf="!user" [routerLink]="'/registration'">Register</li>
       </ul>
+
+      <ul class="mobile">
+        <li [class.selected]="selectedOption == ''" [routerLink]="'/'"><mat-icon>home</mat-icon></li>
+        <li [class.selected]="selectedOption == 'connect'" *ngIf="user" [routerLink]="'/connect'"><mat-icon>connect_without_contact</mat-icon></li>
+        <li [class.selected]="selectedOption == 'chat'" *ngIf="user" [routerLink]="'/chat'"><mat-icon>chat</mat-icon></li>
+        <li [class.selected]="selectedOption == 'profile'" *ngIf="user" [routerLink]="'/profile'"><mat-icon>person</mat-icon></li>
+        <li *ngIf="user" (click)="logout()" [routerLink]="'/'"><mat-icon>logout</mat-icon></li>
+        <li [class.selected]="selectedOption == 'login'" *ngIf="!user" [routerLink]="'/login'"><mat-icon>login</mat-icon></li>
+        <li [class.selected]="selectedOption == 'registration'" *ngIf="!user" [routerLink]="'/registration'"><mat-icon>app_registration</mat-icon></li>
+      </ul>
   </div>
-</section>
+</section> 

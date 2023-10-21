@@ -53,3 +53,30 @@ button {
   color: rgb(221, 0, 0);
 }
  
+.button {
+  cursor: pointer;
+  margin-bottom: 8px;
+
+  > div {
+    display: flex;
+    justify-content: flex-end;
+
+    > label {
+      display: flex;
+      padding: 8px;
+      align-items: center;
+      width: min-content;
+      border-radius: 50px;
+      border: 1px solid $standardLightGrey;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $standardSuperLightGrey;
+      }
+    }
+
+    > input {
+      display: none;
+    }
+  }
+}

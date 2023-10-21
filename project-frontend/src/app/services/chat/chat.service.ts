@@ -75,4 +75,8 @@ export class ChatService extends Base {
         } 
       }); 
   } 
+
+  closeChat() {
+    this.wsService.closeConnection();
+  }
 }
