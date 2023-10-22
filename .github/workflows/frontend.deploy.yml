@@ -1,4 +1,4 @@
-name: CD Build and Deploy 
+name: CD Build and Deploy Frontend
 
 on:
   workflow_run:
@@ -13,14 +13,7 @@ env:
       
 jobs:
   build-push-deploy:
-    runs-on: ubuntu-latest
-
-    strategy: 
-      matrix:
-        subDir: [ 
-          {name: "backend", portBinding: "8000:8000", env: "-e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY"}, 
-          {name: "frontend", portBinding: "8082:3000", env: ""},  
-        ]
+    runs-on: ubuntu-latest 
 
     steps:
       - name: Checkout
@@ -46,18 +39,15 @@ jobs:
           # Build a docker container and
           # push it to ECR so that it can
           # be deployed to ECS.
-          cd project-${{ matrix.subDir.name }}
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir.name }}:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir.name }}:$IMAGE_TAG
-          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY-${{ matrix.subDir.name }}:$IMAGE_TAG" >> $GITHUB_OUTPUT 
+          cd project-frontend
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY-frontend:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY-frontend:$IMAGE_TAG
+          echo "image=$ECR_REGISTRY/$ECR_REPOSITORY-frontend:$IMAGE_TAG" >> $GITHUB_OUTPUT 
 
       - name: Deploy ECR image to EC2
         env: 
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry  }}
-          IMAGE_TAG: ${{ github.sha }}
-          SUB_DIR: ${{ matrix.subDir.name }}
-          PORT: ${{ matrix.subDir.portBinding }}
-          ENV: ${{ matrix.subDir.env }}
+          IMAGE_TAG: ${{ github.sha }} 
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         uses: appleboy/ssh-action@master
@@ -65,13 +55,13 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
-          envs: ECR_REGISTRY,IMAGE_TAG,ECR_REPOSITORY,AWS_REGION,ACC_ID,SUB_DIR,PORT,AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY
+          envs: ECR_REGISTRY,IMAGE_TAG,ECR_REPOSITORY,AWS_REGION,ACC_ID,AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY
           script: |
             sudo yum update -y
             sudo yum install docker -y 
-            sudo docker stop $ECR_REPOSITORY-$SUB_DIR || true
-            sudo docker rm $ECR_REPOSITORY-$SUB_DIR || true 
+            sudo docker stop $ECR_REPOSITORY-frontend || true
+            sudo docker rm $ECR_REPOSITORY-frontend || true 
             aws ecr get-login-password --region $AWS_REGION | sudo docker login --username AWS --password-stdin $ACC_ID.dkr.ecr.$AWS_REGION.amazonaws.com    
             sudo service docker start || true   
-            sudo docker pull $ECR_REGISTRY/$ECR_REPOSITORY-$SUB_DIR:$IMAGE_TAG
-            sudo docker run -d $ENV --name $ECR_REPOSITORY-$SUB_DIR --net connect -p $PORT $ECR_REGISTRY/$ECR_REPOSITORY-$SUB_DIR:$IMAGE_TAG
+            sudo docker pull $ECR_REGISTRY/$ECR_REPOSITORY-frontend:$IMAGE_TAG
+            sudo docker run -d --name $ECR_REPOSITORY-frontend --net connect -p 8000:8000 $ECR_REGISTRY/$ECR_REPOSITORY-frontend:$IMAGE_TAG
