@@ -37,4 +37,4 @@ def get_secret(name):
     secret = get_secret_value_response['SecretString']
 
     # Your code goes here.
-    return json.loads(secret)
+    return json.loads(secret)[name]

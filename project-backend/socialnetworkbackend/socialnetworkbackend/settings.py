@@ -27,9 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 environ.Env.read_env()
  
-
-secret_key = secret_manager.get_secret("prod/connect-backend/secret-key") 
-SECRET_KEY = secret_key["CONNECT_BACKEND_SECRET_KEY"]  
+ 
+SECRET_KEY = secret_manager.get_secret("prod/connect-backend/secret-key") 
 # SECURITY WARNING: don't run with debug turned on in production!F
 DEBUG = True
 
