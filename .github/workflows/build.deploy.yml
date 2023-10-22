@@ -74,4 +74,4 @@ jobs:
             aws ecr get-login-password --region $AWS_REGION | sudo docker login --username AWS --password-stdin $ACC_ID.dkr.ecr.$AWS_REGION.amazonaws.com    
             sudo service docker start || true   
             sudo docker pull $ECR_REGISTRY/$ECR_REPOSITORY-$SUB_DIR:$IMAGE_TAG
-            sudo docker run -d --name $ECR_REPOSITORY-$SUB_DIR --net connect -p $PORT $ECR_REGISTRY/$ECR_REPOSITORY-$SUB_DIR:$IMAGE_TAG
+            sudo docker run -d $ENV --name $ECR_REPOSITORY-$SUB_DIR --net connect -p $PORT $ECR_REGISTRY/$ECR_REPOSITORY-$SUB_DIR:$IMAGE_TAG
