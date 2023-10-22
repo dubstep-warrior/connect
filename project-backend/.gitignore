@@ -1,6 +1,6 @@
 /new_env
 /env
-/socialnetworkbackend/.env
+.env
 
 migrations
 

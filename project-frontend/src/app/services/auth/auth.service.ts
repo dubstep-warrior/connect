@@ -20,11 +20,10 @@ export class AuthService {
     this.init()
   }
 
-  async init() {
-    // TODO FIX ASAP
-    // const res = await this.service.validateAuth()
-    // if(res && res.success) return;
-    // this.logout()
+  async init() { 
+    const res = await this.service.validateAuth()
+    if(res && res.success) return;
+    this.logout()
   }
 
   async login(username: string, password: string) { 

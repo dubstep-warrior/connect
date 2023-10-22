@@ -32,6 +32,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["backend.dubstep-warrior.com"]
 
+if DEBUG == True:
+    ALLOWED_HOSTS.append('localhost')
 
 # Application definition
 
@@ -162,6 +164,9 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [ 
     "https://app.dubstep-warrior.com", 
 ]
+
+if DEBUG == True:
+    CORS_ALLOWED_ORIGINS.append('http://localhost:4200')
 
 AUTH_USER_MODEL = 'account.AppUser'
 
