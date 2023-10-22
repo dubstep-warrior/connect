@@ -57,15 +57,13 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
           SUB_DIR: ${{ matrix.subDir.name }}
           PORT: ${{ matrix.subDir.portBinding }}
-          ENV: ${{ matrix.subDir.env }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          ENV: ${{ matrix.subDir.env }} 
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
-          envs: ECR_REGISTRY,IMAGE_TAG,ECR_REPOSITORY,AWS_REGION,ACC_ID,SUB_DIR,PORT,AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY
+          envs: ECR_REGISTRY,IMAGE_TAG,ECR_REPOSITORY,AWS_REGION,ACC_ID,SUB_DIR,PORT 
           script: |
             sudo yum update -y
             sudo yum install docker -y 
@@ -74,4 +72,4 @@ jobs:
             aws ecr get-login-password --region $AWS_REGION | sudo docker login --username AWS --password-stdin $ACC_ID.dkr.ecr.$AWS_REGION.amazonaws.com    
             sudo service docker start || true   
             sudo docker pull $ECR_REGISTRY/$ECR_REPOSITORY-$SUB_DIR:$IMAGE_TAG
-            sudo docker run -d $ENV --name $ECR_REPOSITORY-$SUB_DIR --net connect -p $PORT $ECR_REGISTRY/$ECR_REPOSITORY-$SUB_DIR:$IMAGE_TAG
+            sudo docker run -d --name $ECR_REPOSITORY-$SUB_DIR --net connect -p $PORT $ECR_REGISTRY/$ECR_REPOSITORY-$SUB_DIR:$IMAGE_TAG
