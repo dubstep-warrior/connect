@@ -27,11 +27,7 @@ export class ServerService {
   }
 
   validateAuth(): any {
-<<<<<<< HEAD
     return this.request('GET', `${this.url}/accounts/api/auth/validate/`);
-=======
-    return this.request('GET', `${this.url}/accounts/api/auth/validate`);
->>>>>>> 7f6ad40745708b81c337554dde5eac27cc040b4f
   }
 
   login(event: any): any {
