@@ -11,7 +11,7 @@ import json
 env = environ.Env()
 
 
-def get_secret(name):
+def get_secret(name, key):
 
     secret_name = name
     region_name = "ap-southeast-1" 
@@ -31,10 +31,10 @@ def get_secret(name):
         # For a list of exceptions thrown, see
         # https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
         print('client err', e)
-        return env(name)
+        return env(key)
 
     # Decrypts secret using the associated KMS key.
     secret = get_secret_value_response['SecretString']
 
     # Your code goes here.
-    return json.loads(secret)[name]
+    return json.loads(secret)[key]
