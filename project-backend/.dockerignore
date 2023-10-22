@@ -1,6 +1,6 @@
 /new_env
 /env
-.env
+**.env
 
 migrations
 
@@ -10,6 +10,7 @@ migrations
 __pycache__/
 local_settings.py
 db.sqlite3
-chatroom_images
-post_images
-profile_images
+**/chatroom_images
+**/post_images
+**/profile_images
+ 
