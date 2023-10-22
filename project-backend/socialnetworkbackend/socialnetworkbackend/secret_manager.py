@@ -14,17 +14,16 @@ env = environ.Env()
 def get_secret(name):
 
     secret_name = name
-    region_name = "ap-southeast-1"
-
-    # Create a Secrets Manager client
-    session = boto3.session.Session(aws_access_key_id=env(
-        'AWS_ACCESS_KEY_ID'), aws_secret_access_key=env('AWS_SECRET_ACCESS_KEY'))
-    client = session.client(
-        service_name='secretsmanager',
-        region_name=region_name
-    )
+    region_name = "ap-southeast-1" 
 
     try: 
+        # Create a Secrets Manager client
+        session = boto3.session.Session(aws_access_key_id=env(
+            'AWS_ACCESS_KEY_ID'), aws_secret_access_key=env('AWS_SECRET_ACCESS_KEY'))
+        client = session.client(
+            service_name='secretsmanager',
+            region_name=region_name
+        )
         get_secret_value_response = client.get_secret_value(
             SecretId=secret_name
         ) 
@@ -32,7 +31,7 @@ def get_secret(name):
         # For a list of exceptions thrown, see
         # https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
         print('client err', e)
-        return None
+        return env(name)
 
     # Decrypts secret using the associated KMS key.
     secret = get_secret_value_response['SecretString']
