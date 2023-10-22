@@ -1,0 +1,15 @@
+/new_env
+/env
+.env
+
+migrations
+
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+chatroom_images
+post_images
+profile_images

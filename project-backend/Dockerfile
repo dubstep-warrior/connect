@@ -17,6 +17,6 @@ RUN pip install -r requirements.txt
 
 # Expose the port server is running on
 EXPOSE 8000
-RUN python socialnetworkbackend/manage.py migrate --run-syncdb 
+# RUN python socialnetworkbackend/manage.py migrate --run-syncdb 
 # Start the server
 CMD ["python", "socialnetworkbackend/manage.py", "runserver", "0.0.0.0:8000"]
